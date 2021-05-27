@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 prefix=/home/yididya/arm_ws/install
+=======
+prefix=/home/riyad/Downloads/Compressed/arm_ws/install
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 
 Name: arm_description
 Description: Description of arm_description

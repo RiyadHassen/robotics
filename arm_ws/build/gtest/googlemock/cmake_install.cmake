@@ -2,7 +2,11 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
+<<<<<<< HEAD
   set(CMAKE_INSTALL_PREFIX "/home/yididya/arm_ws/install")
+=======
+  set(CMAKE_INSTALL_PREFIX "/home/riyad/Downloads/Compressed/arm_ws/install")
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,7 +43,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+<<<<<<< HEAD
   include("/home/yididya/arm_ws/build/gtest/googletest/cmake_install.cmake")
+=======
+  include("/home/riyad/Downloads/Compressed/arm_ws/build/gtest/googletest/cmake_install.cmake")
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 
 endif()
 

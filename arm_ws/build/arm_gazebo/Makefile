@@ -48,10 +48,17 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/yididya/arm_ws/src
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/yididya/arm_ws/build
+=======
+CMAKE_SOURCE_DIR = /home/riyad/Downloads/Compressed/arm_ws/src
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/riyad/Downloads/Compressed/arm_ws/build
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,6 +75,7 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
+<<<<<<< HEAD
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -91,6 +99,29 @@ install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
+=======
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -103,6 +134,7 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+<<<<<<< HEAD
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -113,6 +145,19 @@ test:
 test/fast: test
 
 .PHONY : test/fast
+=======
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 
 # Special rule for the target list_install_components
 list_install_components:
@@ -124,6 +169,7 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
+<<<<<<< HEAD
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -140,11 +186,34 @@ all: cmake_check_build_system
 	cd /home/yididya/arm_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/yididya/arm_ws/build/CMakeFiles /home/yididya/arm_ws/build/arm_gazebo/CMakeFiles/progress.marks
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/yididya/arm_ws/build/CMakeFiles 0
+=======
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# The main all target
+all: cmake_check_build_system
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/riyad/Downloads/Compressed/arm_ws/build/CMakeFiles /home/riyad/Downloads/Compressed/arm_ws/build/arm_gazebo/CMakeFiles/progress.marks
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/riyad/Downloads/Compressed/arm_ws/build/CMakeFiles 0
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : all
 
 # The main clean target
 clean:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/clean
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/clean
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : clean
 
 # The main clean target
@@ -154,16 +223,25 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/preinstall
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/preinstall
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/preinstall
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/preinstall
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
@@ -260,6 +338,14 @@ arm_gazebo_generate_messages_lisp/fast:
 # Convenience name for target.
 arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule:
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+.PHONY : depend
+
+# Convenience name for target.
+arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -269,12 +355,20 @@ actionlib_msgs_generate_messages_cpp: arm_gazebo/CMakeFiles/actionlib_msgs_gener
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_cpp/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : actionlib_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 arm_gazebo/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_gazebo/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -284,12 +378,20 @@ actionlib_generate_messages_nodejs: arm_gazebo/CMakeFiles/actionlib_generate_mes
 
 # fast build rule for target.
 actionlib_generate_messages_nodejs/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make arm_gazebo/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make arm_gazebo/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : actionlib_generate_messages_nodejs/fast
 
 # Convenience name for target.
 arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/rule:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/rule
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/rule
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -299,12 +401,20 @@ gazebo_msgs_generate_messages_nodejs: arm_gazebo/CMakeFiles/gazebo_msgs_generate
 
 # fast build rule for target.
 gazebo_msgs_generate_messages_nodejs/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/build.make arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/build
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/build.make arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/build
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : gazebo_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -314,12 +424,20 @@ trajectory_msgs_generate_messages_eus: arm_gazebo/CMakeFiles/trajectory_msgs_gen
 
 # fast build rule for target.
 trajectory_msgs_generate_messages_eus/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build.make arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build.make arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : trajectory_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -329,12 +447,36 @@ trajectory_msgs_generate_messages_nodejs: arm_gazebo/CMakeFiles/trajectory_msgs_
 
 # fast build rule for target.
 trajectory_msgs_generate_messages_nodejs/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build.make arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build
 .PHONY : trajectory_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule:
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build.make arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build
+.PHONY : trajectory_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+arm_gazebo/CMakeFiles/actionlib_generate_messages_cpp.dir/rule:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+.PHONY : arm_gazebo/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_cpp: arm_gazebo/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+
+.PHONY : actionlib_generate_messages_cpp
+
+# fast build rule for target.
+actionlib_generate_messages_cpp/fast:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make arm_gazebo/CMakeFiles/actionlib_generate_messages_cpp.dir/build
+.PHONY : actionlib_generate_messages_cpp/fast
+
+# Convenience name for target.
+arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -344,12 +486,20 @@ actionlib_msgs_generate_messages_py: arm_gazebo/CMakeFiles/actionlib_msgs_genera
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_py/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : actionlib_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 arm_gazebo/CMakeFiles/actionlib_generate_messages_lisp.dir/rule:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_gazebo/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -359,6 +509,7 @@ actionlib_generate_messages_lisp: arm_gazebo/CMakeFiles/actionlib_generate_messa
 
 # fast build rule for target.
 actionlib_generate_messages_lisp/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make arm_gazebo/CMakeFiles/actionlib_generate_messages_lisp.dir/build
 .PHONY : actionlib_generate_messages_lisp/fast
 
@@ -380,6 +531,14 @@ arm_gazebo_generate_messages_py/fast:
 # Convenience name for target.
 arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make arm_gazebo/CMakeFiles/actionlib_generate_messages_lisp.dir/build
+.PHONY : actionlib_generate_messages_lisp/fast
+
+# Convenience name for target.
+arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -389,12 +548,20 @@ sensor_msgs_generate_messages_cpp: arm_gazebo/CMakeFiles/sensor_msgs_generate_me
 
 # fast build rule for target.
 sensor_msgs_generate_messages_cpp/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : sensor_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 arm_gazebo/CMakeFiles/tf_generate_messages_nodejs.dir/rule:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/tf_generate_messages_nodejs.dir/rule
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/tf_generate_messages_nodejs.dir/rule
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_gazebo/CMakeFiles/tf_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -404,12 +571,20 @@ tf_generate_messages_nodejs: arm_gazebo/CMakeFiles/tf_generate_messages_nodejs.d
 
 # fast build rule for target.
 tf_generate_messages_nodejs/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/tf_generate_messages_nodejs.dir/build.make arm_gazebo/CMakeFiles/tf_generate_messages_nodejs.dir/build
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/tf_generate_messages_nodejs.dir/build.make arm_gazebo/CMakeFiles/tf_generate_messages_nodejs.dir/build
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : tf_generate_messages_nodejs/fast
 
 # Convenience name for target.
 arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/rule:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/rule
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/rule
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -419,12 +594,20 @@ gazebo_msgs_generate_messages_cpp: arm_gazebo/CMakeFiles/gazebo_msgs_generate_me
 
 # fast build rule for target.
 gazebo_msgs_generate_messages_cpp/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/build.make arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/build
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/build.make arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/build
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : gazebo_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -434,12 +617,20 @@ geometry_msgs_generate_messages_eus: arm_gazebo/CMakeFiles/geometry_msgs_generat
 
 # fast build rule for target.
 geometry_msgs_generate_messages_eus/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : geometry_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -449,12 +640,20 @@ geometry_msgs_generate_messages_lisp: arm_gazebo/CMakeFiles/geometry_msgs_genera
 
 # fast build rule for target.
 geometry_msgs_generate_messages_lisp/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : geometry_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 arm_gazebo/CMakeFiles/tf_generate_messages_cpp.dir/rule:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/tf_generate_messages_cpp.dir/rule
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/tf_generate_messages_cpp.dir/rule
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_gazebo/CMakeFiles/tf_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -464,6 +663,7 @@ tf_generate_messages_cpp: arm_gazebo/CMakeFiles/tf_generate_messages_cpp.dir/rul
 
 # fast build rule for target.
 tf_generate_messages_cpp/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/tf_generate_messages_cpp.dir/build.make arm_gazebo/CMakeFiles/tf_generate_messages_cpp.dir/build
 .PHONY : tf_generate_messages_cpp/fast
 
@@ -740,6 +940,254 @@ gazebo_ros_gencfg/fast:
 # Convenience name for target.
 arm_gazebo/CMakeFiles/std_srvs_generate_messages_eus.dir/rule:
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/tf_generate_messages_cpp.dir/build.make arm_gazebo/CMakeFiles/tf_generate_messages_cpp.dir/build
+.PHONY : tf_generate_messages_cpp/fast
+
+# Convenience name for target.
+arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+.PHONY : arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_eus: arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_eus
+
+# fast build rule for target.
+sensor_msgs_generate_messages_eus/fast:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
+.PHONY : sensor_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+.PHONY : arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_lisp: arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_lisp
+
+# fast build rule for target.
+sensor_msgs_generate_messages_lisp/fast:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+.PHONY : sensor_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+arm_gazebo/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
+.PHONY : arm_gazebo/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+std_srvs_generate_messages_cpp: arm_gazebo/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
+
+.PHONY : std_srvs_generate_messages_cpp
+
+# fast build rule for target.
+std_srvs_generate_messages_cpp/fast:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make arm_gazebo/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
+.PHONY : std_srvs_generate_messages_cpp/fast
+
+# Convenience name for target.
+arm_gazebo/CMakeFiles/tf_generate_messages_eus.dir/rule:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/tf_generate_messages_eus.dir/rule
+.PHONY : arm_gazebo/CMakeFiles/tf_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_eus: arm_gazebo/CMakeFiles/tf_generate_messages_eus.dir/rule
+
+.PHONY : tf_generate_messages_eus
+
+# fast build rule for target.
+tf_generate_messages_eus/fast:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/tf_generate_messages_eus.dir/build.make arm_gazebo/CMakeFiles/tf_generate_messages_eus.dir/build
+.PHONY : tf_generate_messages_eus/fast
+
+# Convenience name for target.
+arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_py.dir/rule:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_py.dir/rule
+.PHONY : arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+gazebo_msgs_generate_messages_py: arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_py.dir/rule
+
+.PHONY : gazebo_msgs_generate_messages_py
+
+# fast build rule for target.
+gazebo_msgs_generate_messages_py/fast:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_py.dir/build.make arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_py.dir/build
+.PHONY : gazebo_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+arm_gazebo/CMakeFiles/gazebo_ros_gencfg.dir/rule:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/gazebo_ros_gencfg.dir/rule
+.PHONY : arm_gazebo/CMakeFiles/gazebo_ros_gencfg.dir/rule
+
+# Convenience name for target.
+gazebo_ros_gencfg: arm_gazebo/CMakeFiles/gazebo_ros_gencfg.dir/rule
+
+.PHONY : gazebo_ros_gencfg
+
+# fast build rule for target.
+gazebo_ros_gencfg/fast:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/gazebo_ros_gencfg.dir/build.make arm_gazebo/CMakeFiles/gazebo_ros_gencfg.dir/build
+.PHONY : gazebo_ros_gencfg/fast
+
+# Convenience name for target.
+arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+.PHONY : arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_py: arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_py
+
+# fast build rule for target.
+geometry_msgs_generate_messages_py/fast:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+.PHONY : geometry_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+arm_gazebo/CMakeFiles/tf_generate_messages_lisp.dir/rule:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/tf_generate_messages_lisp.dir/rule
+.PHONY : arm_gazebo/CMakeFiles/tf_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_lisp: arm_gazebo/CMakeFiles/tf_generate_messages_lisp.dir/rule
+
+.PHONY : tf_generate_messages_lisp
+
+# fast build rule for target.
+tf_generate_messages_lisp/fast:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/tf_generate_messages_lisp.dir/build.make arm_gazebo/CMakeFiles/tf_generate_messages_lisp.dir/build
+.PHONY : tf_generate_messages_lisp/fast
+
+# Convenience name for target.
+arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+.PHONY : arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_generate_messages_cpp: arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+
+.PHONY : dynamic_reconfigure_generate_messages_cpp
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_cpp/fast:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_cpp/fast
+
+# Convenience name for target.
+arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+.PHONY : arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_nodejs: arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+sensor_msgs_generate_messages_nodejs/fast:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+.PHONY : sensor_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+.PHONY : arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_cpp: arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_cpp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_cpp/fast:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+.PHONY : geometry_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+arm_gazebo/CMakeFiles/actionlib_generate_messages_py.dir/rule:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/actionlib_generate_messages_py.dir/rule
+.PHONY : arm_gazebo/CMakeFiles/actionlib_generate_messages_py.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_py: arm_gazebo/CMakeFiles/actionlib_generate_messages_py.dir/rule
+
+.PHONY : actionlib_generate_messages_py
+
+# fast build rule for target.
+actionlib_generate_messages_py/fast:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/actionlib_generate_messages_py.dir/build.make arm_gazebo/CMakeFiles/actionlib_generate_messages_py.dir/build
+.PHONY : actionlib_generate_messages_py/fast
+
+# Convenience name for target.
+arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
+.PHONY : arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+trajectory_msgs_generate_messages_cpp: arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : trajectory_msgs_generate_messages_cpp
+
+# fast build rule for target.
+trajectory_msgs_generate_messages_cpp/fast:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build.make arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build
+.PHONY : trajectory_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
+.PHONY : arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+actionlib_msgs_generate_messages_lisp: arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : actionlib_msgs_generate_messages_lisp
+
+# fast build rule for target.
+actionlib_msgs_generate_messages_lisp/fast:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
+.PHONY : actionlib_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
+.PHONY : arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+actionlib_msgs_generate_messages_nodejs: arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : actionlib_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+actionlib_msgs_generate_messages_nodejs/fast:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build.make arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build
+.PHONY : actionlib_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+arm_gazebo/CMakeFiles/tf_generate_messages_py.dir/rule:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/tf_generate_messages_py.dir/rule
+.PHONY : arm_gazebo/CMakeFiles/tf_generate_messages_py.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_py: arm_gazebo/CMakeFiles/tf_generate_messages_py.dir/rule
+
+.PHONY : tf_generate_messages_py
+
+# fast build rule for target.
+tf_generate_messages_py/fast:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/tf_generate_messages_py.dir/build.make arm_gazebo/CMakeFiles/tf_generate_messages_py.dir/build
+.PHONY : tf_generate_messages_py/fast
+
+# Convenience name for target.
+arm_gazebo/CMakeFiles/std_srvs_generate_messages_eus.dir/rule:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_gazebo/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -749,12 +1197,20 @@ std_srvs_generate_messages_eus: arm_gazebo/CMakeFiles/std_srvs_generate_messages
 
 # fast build rule for target.
 std_srvs_generate_messages_eus/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make arm_gazebo/CMakeFiles/std_srvs_generate_messages_eus.dir/build
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make arm_gazebo/CMakeFiles/std_srvs_generate_messages_eus.dir/build
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : std_srvs_generate_messages_eus/fast
 
 # Convenience name for target.
 arm_gazebo/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_gazebo/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -764,12 +1220,20 @@ std_srvs_generate_messages_lisp: arm_gazebo/CMakeFiles/std_srvs_generate_message
 
 # fast build rule for target.
 std_srvs_generate_messages_lisp/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make arm_gazebo/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make arm_gazebo/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : std_srvs_generate_messages_lisp/fast
 
 # Convenience name for target.
 arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -779,12 +1243,20 @@ tf2_msgs_generate_messages_cpp: arm_gazebo/CMakeFiles/tf2_msgs_generate_messages
 
 # fast build rule for target.
 tf2_msgs_generate_messages_cpp/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : tf2_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -794,12 +1266,20 @@ dynamic_reconfigure_generate_messages_lisp: arm_gazebo/CMakeFiles/dynamic_reconf
 
 # fast build rule for target.
 dynamic_reconfigure_generate_messages_lisp/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : dynamic_reconfigure_generate_messages_lisp/fast
 
 # Convenience name for target.
 arm_gazebo/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_gazebo/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -809,12 +1289,20 @@ std_srvs_generate_messages_nodejs: arm_gazebo/CMakeFiles/std_srvs_generate_messa
 
 # fast build rule for target.
 std_srvs_generate_messages_nodejs/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make arm_gazebo/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make arm_gazebo/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : std_srvs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 arm_gazebo/CMakeFiles/arm_gazebo.dir/rule:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/arm_gazebo.dir/rule
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/arm_gazebo.dir/rule
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_gazebo/CMakeFiles/arm_gazebo.dir/rule
 
 # Convenience name for target.
@@ -824,12 +1312,20 @@ arm_gazebo: arm_gazebo/CMakeFiles/arm_gazebo.dir/rule
 
 # fast build rule for target.
 arm_gazebo/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo.dir/build
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo.dir/build
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_gazebo/fast
 
 # Convenience name for target.
 arm_gazebo/CMakeFiles/std_srvs_generate_messages_py.dir/rule:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_gazebo/CMakeFiles/std_srvs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -839,6 +1335,7 @@ std_srvs_generate_messages_py: arm_gazebo/CMakeFiles/std_srvs_generate_messages_
 
 # fast build rule for target.
 std_srvs_generate_messages_py/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/std_srvs_generate_messages_py.dir/build.make arm_gazebo/CMakeFiles/std_srvs_generate_messages_py.dir/build
 .PHONY : std_srvs_generate_messages_py/fast
 
@@ -860,6 +1357,14 @@ arm_gazebo_generate_messages_cpp/fast:
 # Convenience name for target.
 arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/std_srvs_generate_messages_py.dir/build.make arm_gazebo/CMakeFiles/std_srvs_generate_messages_py.dir/build
+.PHONY : std_srvs_generate_messages_py/fast
+
+# Convenience name for target.
+arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -869,12 +1374,20 @@ sensor_msgs_generate_messages_py: arm_gazebo/CMakeFiles/sensor_msgs_generate_mes
 
 # fast build rule for target.
 sensor_msgs_generate_messages_py/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : sensor_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -884,12 +1397,20 @@ tf2_msgs_generate_messages_eus: arm_gazebo/CMakeFiles/tf2_msgs_generate_messages
 
 # fast build rule for target.
 tf2_msgs_generate_messages_eus/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : tf2_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -899,6 +1420,7 @@ tf2_msgs_generate_messages_lisp: arm_gazebo/CMakeFiles/tf2_msgs_generate_message
 
 # fast build rule for target.
 tf2_msgs_generate_messages_lisp/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
 .PHONY : tf2_msgs_generate_messages_lisp/fast
 
@@ -920,6 +1442,14 @@ listener/fast:
 # Convenience name for target.
 arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
+.PHONY : tf2_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -929,12 +1459,20 @@ tf2_msgs_generate_messages_nodejs: arm_gazebo/CMakeFiles/tf2_msgs_generate_messa
 
 # fast build rule for target.
 tf2_msgs_generate_messages_nodejs/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : tf2_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 arm_gazebo/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_gazebo/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
 
 # Convenience name for target.
@@ -944,12 +1482,20 @@ dynamic_reconfigure_gencfg: arm_gazebo/CMakeFiles/dynamic_reconfigure_gencfg.dir
 
 # fast build rule for target.
 dynamic_reconfigure_gencfg/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make arm_gazebo/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make arm_gazebo/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : dynamic_reconfigure_gencfg/fast
 
 # Convenience name for target.
 arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -959,12 +1505,20 @@ actionlib_msgs_generate_messages_eus: arm_gazebo/CMakeFiles/actionlib_msgs_gener
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_eus/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make arm_gazebo/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : actionlib_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -974,12 +1528,20 @@ dynamic_reconfigure_generate_messages_py: arm_gazebo/CMakeFiles/dynamic_reconfig
 
 # fast build rule for target.
 dynamic_reconfigure_generate_messages_py/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : dynamic_reconfigure_generate_messages_py/fast
 
 # Convenience name for target.
 arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -989,12 +1551,20 @@ geometry_msgs_generate_messages_nodejs: arm_gazebo/CMakeFiles/geometry_msgs_gene
 
 # fast build rule for target.
 geometry_msgs_generate_messages_nodejs/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : geometry_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1004,12 +1574,20 @@ dynamic_reconfigure_generate_messages_eus: arm_gazebo/CMakeFiles/dynamic_reconfi
 
 # fast build rule for target.
 dynamic_reconfigure_generate_messages_eus/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : dynamic_reconfigure_generate_messages_eus/fast
 
 # Convenience name for target.
 arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_eus.dir/rule:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_eus.dir/rule
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_eus.dir/rule
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1019,12 +1597,20 @@ gazebo_msgs_generate_messages_eus: arm_gazebo/CMakeFiles/gazebo_msgs_generate_me
 
 # fast build rule for target.
 gazebo_msgs_generate_messages_eus/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_eus.dir/build.make arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_eus.dir/build
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_eus.dir/build.make arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_eus.dir/build
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : gazebo_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -1034,12 +1620,20 @@ dynamic_reconfigure_generate_messages_nodejs: arm_gazebo/CMakeFiles/dynamic_reco
 
 # fast build rule for target.
 dynamic_reconfigure_generate_messages_nodejs/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make arm_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
 
 # Convenience name for target.
 arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -1049,12 +1643,20 @@ tf2_msgs_generate_messages_py: arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_
 
 # fast build rule for target.
 tf2_msgs_generate_messages_py/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make arm_gazebo/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : tf2_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_lisp.dir/rule:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_lisp.dir/rule
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_lisp.dir/rule
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -1064,12 +1666,20 @@ gazebo_msgs_generate_messages_lisp: arm_gazebo/CMakeFiles/gazebo_msgs_generate_m
 
 # fast build rule for target.
 gazebo_msgs_generate_messages_lisp/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_lisp.dir/build.make arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_lisp.dir/build
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_lisp.dir/build.make arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_lisp.dir/build
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : gazebo_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -1079,12 +1689,20 @@ trajectory_msgs_generate_messages_lisp: arm_gazebo/CMakeFiles/trajectory_msgs_ge
 
 # fast build rule for target.
 trajectory_msgs_generate_messages_lisp/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build.make arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build.make arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : trajectory_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 arm_gazebo/CMakeFiles/actionlib_generate_messages_eus.dir/rule:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/actionlib_generate_messages_eus.dir/rule
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/actionlib_generate_messages_eus.dir/rule
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_gazebo/CMakeFiles/actionlib_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1094,12 +1712,20 @@ actionlib_generate_messages_eus: arm_gazebo/CMakeFiles/actionlib_generate_messag
 
 # fast build rule for target.
 actionlib_generate_messages_eus/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/actionlib_generate_messages_eus.dir/build.make arm_gazebo/CMakeFiles/actionlib_generate_messages_eus.dir/build
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/actionlib_generate_messages_eus.dir/build.make arm_gazebo/CMakeFiles/actionlib_generate_messages_eus.dir/build
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : actionlib_generate_messages_eus/fast
 
 # Convenience name for target.
 arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -1109,6 +1735,7 @@ trajectory_msgs_generate_messages_py: arm_gazebo/CMakeFiles/trajectory_msgs_gene
 
 # fast build rule for target.
 trajectory_msgs_generate_messages_py/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build.make arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build
 .PHONY : trajectory_msgs_generate_messages_py/fast
 
@@ -1172,15 +1799,24 @@ arm_gazebo_geneus/fast:
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo_geneus.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo_geneus.dir/build
 .PHONY : arm_gazebo_geneus/fast
 
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build.make arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build
+.PHONY : trajectory_msgs_generate_messages_py/fast
+
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 src/controller.o: src/controller.cpp.o
 
 .PHONY : src/controller.o
 
 # target to build an object file
 src/controller.cpp.o:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/talker.dir/build.make arm_gazebo/CMakeFiles/talker.dir/src/controller.cpp.o
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo.dir/src/controller.cpp.o
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/listener.dir/build.make arm_gazebo/CMakeFiles/listener.dir/src/controller.cpp.o
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo.dir/src/controller.cpp.o
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : src/controller.cpp.o
 
 src/controller.i: src/controller.cpp.i
@@ -1189,9 +1825,13 @@ src/controller.i: src/controller.cpp.i
 
 # target to preprocess a source file
 src/controller.cpp.i:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/talker.dir/build.make arm_gazebo/CMakeFiles/talker.dir/src/controller.cpp.i
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo.dir/src/controller.cpp.i
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/listener.dir/build.make arm_gazebo/CMakeFiles/listener.dir/src/controller.cpp.i
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo.dir/src/controller.cpp.i
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : src/controller.cpp.i
 
 src/controller.s: src/controller.cpp.s
@@ -1200,9 +1840,13 @@ src/controller.s: src/controller.cpp.s
 
 # target to generate assembly for a file
 src/controller.cpp.s:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/talker.dir/build.make arm_gazebo/CMakeFiles/talker.dir/src/controller.cpp.s
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo.dir/src/controller.cpp.s
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/listener.dir/build.make arm_gazebo/CMakeFiles/listener.dir/src/controller.cpp.s
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo.dir/src/controller.cpp.s
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : src/controller.cpp.s
 
 # Help Target
@@ -1212,6 +1856,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
+<<<<<<< HEAD
 	@echo "... install/local"
 	@echo "... install"
 	@echo "... rebuild_cache"
@@ -1223,30 +1868,54 @@ help:
 	@echo "... arm_gazebo_generate_messages_nodejs"
 	@echo "... arm_gazebo_genlisp"
 	@echo "... arm_gazebo_generate_messages_lisp"
+=======
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 	@echo "... actionlib_msgs_generate_messages_cpp"
 	@echo "... actionlib_generate_messages_nodejs"
 	@echo "... gazebo_msgs_generate_messages_nodejs"
 	@echo "... trajectory_msgs_generate_messages_eus"
 	@echo "... trajectory_msgs_generate_messages_nodejs"
+<<<<<<< HEAD
 	@echo "... actionlib_msgs_generate_messages_py"
 	@echo "... actionlib_generate_messages_lisp"
 	@echo "... arm_gazebo_generate_messages_py"
+=======
+	@echo "... actionlib_generate_messages_cpp"
+	@echo "... actionlib_msgs_generate_messages_py"
+	@echo "... actionlib_generate_messages_lisp"
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 	@echo "... sensor_msgs_generate_messages_cpp"
 	@echo "... tf_generate_messages_nodejs"
 	@echo "... gazebo_msgs_generate_messages_cpp"
 	@echo "... geometry_msgs_generate_messages_eus"
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... tf_generate_messages_cpp"
+<<<<<<< HEAD
 	@echo "... tf_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... _arm_gazebo_generate_messages_check_deps_angles"
 	@echo "... dynamic_reconfigure_generate_messages_cpp"
 	@echo "... arm_gazebo_gencpp"
+=======
+	@echo "... sensor_msgs_generate_messages_eus"
+	@echo "... sensor_msgs_generate_messages_lisp"
+	@echo "... std_srvs_generate_messages_cpp"
+	@echo "... tf_generate_messages_eus"
+	@echo "... gazebo_msgs_generate_messages_py"
+	@echo "... gazebo_ros_gencfg"
+	@echo "... geometry_msgs_generate_messages_py"
+	@echo "... tf_generate_messages_lisp"
+	@echo "... dynamic_reconfigure_generate_messages_cpp"
+	@echo "... sensor_msgs_generate_messages_nodejs"
+	@echo "... edit_cache"
+	@echo "... geometry_msgs_generate_messages_cpp"
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 	@echo "... actionlib_generate_messages_py"
 	@echo "... trajectory_msgs_generate_messages_cpp"
 	@echo "... actionlib_msgs_generate_messages_lisp"
 	@echo "... actionlib_msgs_generate_messages_nodejs"
 	@echo "... tf_generate_messages_py"
+<<<<<<< HEAD
 	@echo "... tf_generate_messages_eus"
 	@echo "... std_srvs_generate_messages_cpp"
 	@echo "... gazebo_msgs_generate_messages_py"
@@ -1256,6 +1925,8 @@ help:
 	@echo "... sensor_msgs_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... gazebo_ros_gencfg"
+=======
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 	@echo "... std_srvs_generate_messages_eus"
 	@echo "... std_srvs_generate_messages_lisp"
 	@echo "... tf2_msgs_generate_messages_cpp"
@@ -1263,11 +1934,19 @@ help:
 	@echo "... std_srvs_generate_messages_nodejs"
 	@echo "... arm_gazebo"
 	@echo "... std_srvs_generate_messages_py"
+<<<<<<< HEAD
 	@echo "... arm_gazebo_generate_messages_cpp"
 	@echo "... sensor_msgs_generate_messages_py"
 	@echo "... tf2_msgs_generate_messages_eus"
 	@echo "... tf2_msgs_generate_messages_lisp"
 	@echo "... listener"
+=======
+	@echo "... test"
+	@echo "... sensor_msgs_generate_messages_py"
+	@echo "... tf2_msgs_generate_messages_eus"
+	@echo "... rebuild_cache"
+	@echo "... tf2_msgs_generate_messages_lisp"
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 	@echo "... tf2_msgs_generate_messages_nodejs"
 	@echo "... dynamic_reconfigure_gencfg"
 	@echo "... actionlib_msgs_generate_messages_eus"
@@ -1278,6 +1957,7 @@ help:
 	@echo "... dynamic_reconfigure_generate_messages_nodejs"
 	@echo "... tf2_msgs_generate_messages_py"
 	@echo "... gazebo_msgs_generate_messages_lisp"
+<<<<<<< HEAD
 	@echo "... trajectory_msgs_generate_messages_lisp"
 	@echo "... actionlib_generate_messages_eus"
 	@echo "... trajectory_msgs_generate_messages_py"
@@ -1285,6 +1965,14 @@ help:
 	@echo "... arm_gazebo_generate_messages"
 	@echo "... arm_gazebo_generate_messages_eus"
 	@echo "... arm_gazebo_geneus"
+=======
+	@echo "... install/local"
+	@echo "... trajectory_msgs_generate_messages_lisp"
+	@echo "... actionlib_generate_messages_eus"
+	@echo "... trajectory_msgs_generate_messages_py"
+	@echo "... list_install_components"
+	@echo "... install"
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 	@echo "... src/controller.o"
 	@echo "... src/controller.i"
 	@echo "... src/controller.s"
@@ -1299,6 +1987,10 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : cmake_check_build_system
 

@@ -48,10 +48,17 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/yididya/arm_ws/src
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/yididya/arm_ws/build
+=======
+CMAKE_SOURCE_DIR = /home/riyad/Downloads/Compressed/arm_ws/src
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/riyad/Downloads/Compressed/arm_ws/build
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,9 +144,15 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/yididya/arm_ws/build/CMakeFiles /home/yididya/arm_ws/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/yididya/arm_ws/build/CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/riyad/Downloads/Compressed/arm_ws/build/CMakeFiles /home/riyad/Downloads/Compressed/arm_ws/build/CMakeFiles/progress.marks
+	$(MAKE) -f CMakeFiles/Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/riyad/Downloads/Compressed/arm_ws/build/CMakeFiles 0
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : all
 
 # The main clean target
@@ -493,6 +506,7 @@ rosgraph_msgs_generate_messages_py/fast:
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
 #=============================================================================
+<<<<<<< HEAD
 # Target rules for targets named talker
 
 # Build rule for target.
@@ -571,6 +585,8 @@ arm_gazebo_generate_messages_lisp/fast:
 .PHONY : arm_gazebo_generate_messages_lisp/fast
 
 #=============================================================================
+=======
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 # Target rules for targets named actionlib_msgs_generate_messages_cpp
 
 # Build rule for target.
@@ -636,6 +652,22 @@ trajectory_msgs_generate_messages_nodejs/fast:
 .PHONY : trajectory_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
+<<<<<<< HEAD
+=======
+# Target rules for targets named actionlib_generate_messages_cpp
+
+# Build rule for target.
+actionlib_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_generate_messages_cpp
+.PHONY : actionlib_generate_messages_cpp
+
+# fast build rule for target.
+actionlib_generate_messages_cpp/fast:
+	$(MAKE) -f arm_gazebo/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make arm_gazebo/CMakeFiles/actionlib_generate_messages_cpp.dir/build
+.PHONY : actionlib_generate_messages_cpp/fast
+
+#=============================================================================
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 # Target rules for targets named actionlib_msgs_generate_messages_py
 
 # Build rule for target.
@@ -662,6 +694,7 @@ actionlib_generate_messages_lisp/fast:
 .PHONY : actionlib_generate_messages_lisp/fast
 
 #=============================================================================
+<<<<<<< HEAD
 # Target rules for targets named arm_gazebo_generate_messages_py
 
 # Build rule for target.
@@ -675,6 +708,8 @@ arm_gazebo_generate_messages_py/fast:
 .PHONY : arm_gazebo_generate_messages_py/fast
 
 #=============================================================================
+=======
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 # Target rules for targets named sensor_msgs_generate_messages_cpp
 
 # Build rule for target.
@@ -753,6 +788,7 @@ tf_generate_messages_cpp/fast:
 .PHONY : tf_generate_messages_cpp/fast
 
 #=============================================================================
+<<<<<<< HEAD
 # Target rules for targets named tf_generate_messages_lisp
 
 # Build rule for target.
@@ -790,6 +826,110 @@ _arm_gazebo_generate_messages_check_deps_angles: cmake_check_build_system
 _arm_gazebo_generate_messages_check_deps_angles/fast:
 	$(MAKE) -f arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_angles.dir/build.make arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_angles.dir/build
 .PHONY : _arm_gazebo_generate_messages_check_deps_angles/fast
+=======
+# Target rules for targets named sensor_msgs_generate_messages_eus
+
+# Build rule for target.
+sensor_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_eus
+.PHONY : sensor_msgs_generate_messages_eus
+
+# fast build rule for target.
+sensor_msgs_generate_messages_eus/fast:
+	$(MAKE) -f arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
+.PHONY : sensor_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_lisp
+
+# Build rule for target.
+sensor_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_lisp
+.PHONY : sensor_msgs_generate_messages_lisp
+
+# fast build rule for target.
+sensor_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+.PHONY : sensor_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named std_srvs_generate_messages_cpp
+
+# Build rule for target.
+std_srvs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_srvs_generate_messages_cpp
+.PHONY : std_srvs_generate_messages_cpp
+
+# fast build rule for target.
+std_srvs_generate_messages_cpp/fast:
+	$(MAKE) -f arm_gazebo/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make arm_gazebo/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
+.PHONY : std_srvs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named tf_generate_messages_eus
+
+# Build rule for target.
+tf_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf_generate_messages_eus
+.PHONY : tf_generate_messages_eus
+
+# fast build rule for target.
+tf_generate_messages_eus/fast:
+	$(MAKE) -f arm_gazebo/CMakeFiles/tf_generate_messages_eus.dir/build.make arm_gazebo/CMakeFiles/tf_generate_messages_eus.dir/build
+.PHONY : tf_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named gazebo_msgs_generate_messages_py
+
+# Build rule for target.
+gazebo_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gazebo_msgs_generate_messages_py
+.PHONY : gazebo_msgs_generate_messages_py
+
+# fast build rule for target.
+gazebo_msgs_generate_messages_py/fast:
+	$(MAKE) -f arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_py.dir/build.make arm_gazebo/CMakeFiles/gazebo_msgs_generate_messages_py.dir/build
+.PHONY : gazebo_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named gazebo_ros_gencfg
+
+# Build rule for target.
+gazebo_ros_gencfg: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gazebo_ros_gencfg
+.PHONY : gazebo_ros_gencfg
+
+# fast build rule for target.
+gazebo_ros_gencfg/fast:
+	$(MAKE) -f arm_gazebo/CMakeFiles/gazebo_ros_gencfg.dir/build.make arm_gazebo/CMakeFiles/gazebo_ros_gencfg.dir/build
+.PHONY : gazebo_ros_gencfg/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_py
+
+# Build rule for target.
+geometry_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_py
+.PHONY : geometry_msgs_generate_messages_py
+
+# fast build rule for target.
+geometry_msgs_generate_messages_py/fast:
+	$(MAKE) -f arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+.PHONY : geometry_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named tf_generate_messages_lisp
+
+# Build rule for target.
+tf_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf_generate_messages_lisp
+.PHONY : tf_generate_messages_lisp
+
+# fast build rule for target.
+tf_generate_messages_lisp/fast:
+	$(MAKE) -f arm_gazebo/CMakeFiles/tf_generate_messages_lisp.dir/build.make arm_gazebo/CMakeFiles/tf_generate_messages_lisp.dir/build
+.PHONY : tf_generate_messages_lisp/fast
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 
 #=============================================================================
 # Target rules for targets named dynamic_reconfigure_generate_messages_cpp
@@ -805,6 +945,7 @@ dynamic_reconfigure_generate_messages_cpp/fast:
 .PHONY : dynamic_reconfigure_generate_messages_cpp/fast
 
 #=============================================================================
+<<<<<<< HEAD
 # Target rules for targets named arm_gazebo_gencpp
 
 # Build rule for target.
@@ -816,6 +957,32 @@ arm_gazebo_gencpp: cmake_check_build_system
 arm_gazebo_gencpp/fast:
 	$(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo_gencpp.dir/build
 .PHONY : arm_gazebo_gencpp/fast
+=======
+# Target rules for targets named sensor_msgs_generate_messages_nodejs
+
+# Build rule for target.
+sensor_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_nodejs
+.PHONY : sensor_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+sensor_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make arm_gazebo/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+.PHONY : sensor_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_cpp
+
+# Build rule for target.
+geometry_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_cpp
+.PHONY : geometry_msgs_generate_messages_cpp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make arm_gazebo/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+.PHONY : geometry_msgs_generate_messages_cpp/fast
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 
 #=============================================================================
 # Target rules for targets named actionlib_generate_messages_py
@@ -883,6 +1050,7 @@ tf_generate_messages_py/fast:
 .PHONY : tf_generate_messages_py/fast
 
 #=============================================================================
+<<<<<<< HEAD
 # Target rules for targets named tf_generate_messages_eus
 
 # Build rule for target.
@@ -987,6 +1155,8 @@ gazebo_ros_gencfg/fast:
 .PHONY : gazebo_ros_gencfg/fast
 
 #=============================================================================
+=======
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 # Target rules for targets named std_srvs_generate_messages_eus
 
 # Build rule for target.
@@ -1078,6 +1248,7 @@ std_srvs_generate_messages_py/fast:
 .PHONY : std_srvs_generate_messages_py/fast
 
 #=============================================================================
+<<<<<<< HEAD
 # Target rules for targets named arm_gazebo_generate_messages_cpp
 
 # Build rule for target.
@@ -1091,6 +1262,8 @@ arm_gazebo_generate_messages_cpp/fast:
 .PHONY : arm_gazebo_generate_messages_cpp/fast
 
 #=============================================================================
+=======
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 # Target rules for targets named sensor_msgs_generate_messages_py
 
 # Build rule for target.
@@ -1130,6 +1303,7 @@ tf2_msgs_generate_messages_lisp/fast:
 .PHONY : tf2_msgs_generate_messages_lisp/fast
 
 #=============================================================================
+<<<<<<< HEAD
 # Target rules for targets named listener
 
 # Build rule for target.
@@ -1143,6 +1317,8 @@ listener/fast:
 .PHONY : listener/fast
 
 #=============================================================================
+=======
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 # Target rules for targets named tf2_msgs_generate_messages_nodejs
 
 # Build rule for target.
@@ -1311,6 +1487,7 @@ trajectory_msgs_generate_messages_py/fast:
 	$(MAKE) -f arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build.make arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build
 .PHONY : trajectory_msgs_generate_messages_py/fast
 
+<<<<<<< HEAD
 #=============================================================================
 # Target rules for targets named actionlib_generate_messages_cpp
 
@@ -1363,6 +1540,8 @@ arm_gazebo_geneus/fast:
 	$(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo_geneus.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo_geneus.dir/build
 .PHONY : arm_gazebo_geneus/fast
 
+=======
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1401,36 +1580,60 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
+<<<<<<< HEAD
 	@echo "... talker"
 	@echo "... arm_gazebo_genpy"
 	@echo "... arm_gazebo_gennodejs"
 	@echo "... arm_gazebo_generate_messages_nodejs"
 	@echo "... arm_gazebo_genlisp"
 	@echo "... arm_gazebo_generate_messages_lisp"
+=======
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 	@echo "... actionlib_msgs_generate_messages_cpp"
 	@echo "... actionlib_generate_messages_nodejs"
 	@echo "... gazebo_msgs_generate_messages_nodejs"
 	@echo "... trajectory_msgs_generate_messages_eus"
 	@echo "... trajectory_msgs_generate_messages_nodejs"
+<<<<<<< HEAD
 	@echo "... actionlib_msgs_generate_messages_py"
 	@echo "... actionlib_generate_messages_lisp"
 	@echo "... arm_gazebo_generate_messages_py"
+=======
+	@echo "... actionlib_generate_messages_cpp"
+	@echo "... actionlib_msgs_generate_messages_py"
+	@echo "... actionlib_generate_messages_lisp"
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 	@echo "... sensor_msgs_generate_messages_cpp"
 	@echo "... tf_generate_messages_nodejs"
 	@echo "... gazebo_msgs_generate_messages_cpp"
 	@echo "... geometry_msgs_generate_messages_eus"
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... tf_generate_messages_cpp"
+<<<<<<< HEAD
 	@echo "... tf_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... _arm_gazebo_generate_messages_check_deps_angles"
 	@echo "... dynamic_reconfigure_generate_messages_cpp"
 	@echo "... arm_gazebo_gencpp"
+=======
+	@echo "... sensor_msgs_generate_messages_eus"
+	@echo "... sensor_msgs_generate_messages_lisp"
+	@echo "... std_srvs_generate_messages_cpp"
+	@echo "... tf_generate_messages_eus"
+	@echo "... gazebo_msgs_generate_messages_py"
+	@echo "... gazebo_ros_gencfg"
+	@echo "... geometry_msgs_generate_messages_py"
+	@echo "... tf_generate_messages_lisp"
+	@echo "... dynamic_reconfigure_generate_messages_cpp"
+	@echo "... sensor_msgs_generate_messages_nodejs"
+	@echo "... geometry_msgs_generate_messages_cpp"
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 	@echo "... actionlib_generate_messages_py"
 	@echo "... trajectory_msgs_generate_messages_cpp"
 	@echo "... actionlib_msgs_generate_messages_lisp"
 	@echo "... actionlib_msgs_generate_messages_nodejs"
 	@echo "... tf_generate_messages_py"
+<<<<<<< HEAD
 	@echo "... tf_generate_messages_eus"
 	@echo "... std_srvs_generate_messages_cpp"
 	@echo "... gazebo_msgs_generate_messages_py"
@@ -1439,6 +1642,8 @@ help:
 	@echo "... sensor_msgs_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... gazebo_ros_gencfg"
+=======
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 	@echo "... std_srvs_generate_messages_eus"
 	@echo "... std_srvs_generate_messages_lisp"
 	@echo "... tf2_msgs_generate_messages_cpp"
@@ -1446,11 +1651,17 @@ help:
 	@echo "... std_srvs_generate_messages_nodejs"
 	@echo "... arm_gazebo"
 	@echo "... std_srvs_generate_messages_py"
+<<<<<<< HEAD
 	@echo "... arm_gazebo_generate_messages_cpp"
 	@echo "... sensor_msgs_generate_messages_py"
 	@echo "... tf2_msgs_generate_messages_eus"
 	@echo "... tf2_msgs_generate_messages_lisp"
 	@echo "... listener"
+=======
+	@echo "... sensor_msgs_generate_messages_py"
+	@echo "... tf2_msgs_generate_messages_eus"
+	@echo "... tf2_msgs_generate_messages_lisp"
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 	@echo "... tf2_msgs_generate_messages_nodejs"
 	@echo "... dynamic_reconfigure_gencfg"
 	@echo "... actionlib_msgs_generate_messages_eus"
@@ -1464,10 +1675,13 @@ help:
 	@echo "... trajectory_msgs_generate_messages_lisp"
 	@echo "... actionlib_generate_messages_eus"
 	@echo "... trajectory_msgs_generate_messages_py"
+<<<<<<< HEAD
 	@echo "... actionlib_generate_messages_cpp"
 	@echo "... arm_gazebo_generate_messages"
 	@echo "... arm_gazebo_generate_messages_eus"
 	@echo "... arm_gazebo_geneus"
+=======
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : help
 
 

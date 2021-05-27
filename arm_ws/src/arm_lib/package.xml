@@ -37,7 +37,12 @@
   <!--   <build_depend>roscpp</build_depend> -->
   <!--   <exec_depend>roscpp</exec_depend> -->
   <!-- Use build_depend for packages you need at compile time: -->
+<<<<<<< HEAD
   <!--   <build_depend>message_generation</build_depend> -->
+=======
+    <build_depend>message_generation</build_depend>
+    <exec_depend>message_runtime</exec_depend>
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
   <!-- Use build_export_depend for packages you need in order to build against this package: -->
   <!--   <build_export_depend>message_generation</build_export_depend> -->
   <!-- Use buildtool_depend for build tool packages: -->
@@ -59,7 +64,10 @@
   <exec_depend>rospy</exec_depend>
   <exec_depend>std_msgs</exec_depend>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
   <!-- The export tag contains other, unspecified, tags -->
   <export>
     <!-- Other tools can request additional information be placed here -->

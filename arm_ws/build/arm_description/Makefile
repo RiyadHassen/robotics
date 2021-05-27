@@ -48,10 +48,17 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/yididya/arm_ws/src
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/yididya/arm_ws/build
+=======
+CMAKE_SOURCE_DIR = /home/riyad/Downloads/Compressed/arm_ws/src
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/riyad/Downloads/Compressed/arm_ws/build
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +144,24 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/yididya/arm_ws/build/CMakeFiles /home/yididya/arm_ws/build/arm_description/CMakeFiles/progress.marks
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_description/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/yididya/arm_ws/build/CMakeFiles 0
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/riyad/Downloads/Compressed/arm_ws/build/CMakeFiles /home/riyad/Downloads/Compressed/arm_ws/build/arm_description/CMakeFiles/progress.marks
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_description/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/riyad/Downloads/Compressed/arm_ws/build/CMakeFiles 0
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : all
 
 # The main clean target
 clean:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_description/clean
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_description/clean
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +171,38 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_description/preinstall
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_description/preinstall
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_description/preinstall
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_description/preinstall
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : depend
 
 # Convenience name for target.
 arm_description/CMakeFiles/_catkin_empty_exported_target.dir/rule:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_description/CMakeFiles/_catkin_empty_exported_target.dir/rule
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f CMakeFiles/Makefile2 arm_description/CMakeFiles/_catkin_empty_exported_target.dir/rule
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_description/CMakeFiles/_catkin_empty_exported_target.dir/rule
 
 # Convenience name for target.
@@ -179,7 +212,11 @@ _catkin_empty_exported_target: arm_description/CMakeFiles/_catkin_empty_exported
 
 # fast build rule for target.
 _catkin_empty_exported_target/fast:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(MAKE) -f arm_description/CMakeFiles/_catkin_empty_exported_target.dir/build.make arm_description/CMakeFiles/_catkin_empty_exported_target.dir/build
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(MAKE) -f arm_description/CMakeFiles/_catkin_empty_exported_target.dir/build.make arm_description/CMakeFiles/_catkin_empty_exported_target.dir/build
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : _catkin_empty_exported_target/fast
 
 # Help Target
@@ -207,6 +244,10 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : cmake_check_build_system
 

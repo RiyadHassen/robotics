@@ -6,6 +6,7 @@
 
 #IncludeRegexTransform: 
 
+<<<<<<< HEAD
 /home/yididya/arm_ws/devel/include/arm_gazebo/angles.h
 string
 -
@@ -23,6 +24,9 @@ ros/message_operations.h
 -
 
 /home/yididya/arm_ws/src/arm_gazebo/src/controller.cpp
+=======
+/home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/src/controller.cpp
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 functional
 -
 gazebo/gazebo.hh
@@ -35,6 +39,7 @@ ignition/math/Vector3.hh
 -
 iostream
 -
+<<<<<<< HEAD
 sstream
 -
 arm_gazebo/angles.h
@@ -185,6 +190,8 @@ sys/time.h
 /opt/ros/noetic/include/ros/types.h
 stdint.h
 -
+=======
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 
 /usr/include/gazebo-11/gazebo/Master.hh
 string
@@ -8267,6 +8274,11 @@ ignition/msgs/model_configuration.pb.h
 -
 ignition/msgs/model_v.pb.h
 -
+<<<<<<< HEAD
+=======
+ignition/msgs/occupancy_grid.pb.h
+-
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 ignition/msgs/odometry.pb.h
 -
 ignition/msgs/packet.pb.h
@@ -11938,6 +11950,49 @@ memory
 ignition/msgs/Export.hh
 -
 
+<<<<<<< HEAD
+=======
+/usr/include/ignition/msgs5/ignition/msgs/occupancy_grid.pb.h
+string
+-
+google/protobuf/stubs/common.h
+-
+google/protobuf/io/coded_stream.h
+-
+google/protobuf/arena.h
+-
+google/protobuf/arenastring.h
+-
+google/protobuf/generated_message_table_driven.h
+-
+google/protobuf/generated_message_util.h
+-
+google/protobuf/inlined_string_field.h
+-
+google/protobuf/metadata.h
+-
+google/protobuf/message.h
+-
+google/protobuf/repeated_field.h
+-
+google/protobuf/extension_set.h
+-
+google/protobuf/unknown_field_set.h
+-
+ignition/msgs/header.pb.h
+/usr/include/ignition/msgs5/ignition/msgs/ignition/msgs/header.pb.h
+ignition/msgs/pose.pb.h
+/usr/include/ignition/msgs5/ignition/msgs/ignition/msgs/pose.pb.h
+ignition/msgs/time.pb.h
+/usr/include/ignition/msgs5/ignition/msgs/ignition/msgs/time.pb.h
+sys/sysmacros.h
+-
+memory
+-
+ignition/msgs/Export.hh
+-
+
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 /usr/include/ignition/msgs5/ignition/msgs/odometry.pb.h
 string
 -

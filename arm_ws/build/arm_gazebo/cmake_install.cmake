@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 # Install script for directory: /home/yididya/arm_ws/src/arm_gazebo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
   set(CMAKE_INSTALL_PREFIX "/home/yididya/arm_ws/install")
+=======
+# Install script for directory: /home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo
+
+# Set the install prefix
+if(NOT DEFINED CMAKE_INSTALL_PREFIX)
+  set(CMAKE_INSTALL_PREFIX "/home/riyad/Downloads/Compressed/arm_ws/install")
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,6 +46,7 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+<<<<<<< HEAD
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/arm_gazebo/msg" TYPE FILE FILES "/home/yididya/arm_ws/src/arm_gazebo/msg/angles.msg")
 endif()
 
@@ -75,16 +84,28 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/arm_gazebo/cmake" TYPE FILE FILES "/home/yididya/arm_ws/build/arm_gazebo/catkin_generated/installspace/arm_gazebo-msg-extras.cmake")
+=======
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/riyad/Downloads/Compressed/arm_ws/build/arm_gazebo/catkin_generated/installspace/arm_gazebo.pc")
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/arm_gazebo/cmake" TYPE FILE FILES
+<<<<<<< HEAD
     "/home/yididya/arm_ws/build/arm_gazebo/catkin_generated/installspace/arm_gazeboConfig.cmake"
     "/home/yididya/arm_ws/build/arm_gazebo/catkin_generated/installspace/arm_gazeboConfig-version.cmake"
+=======
+    "/home/riyad/Downloads/Compressed/arm_ws/build/arm_gazebo/catkin_generated/installspace/arm_gazeboConfig.cmake"
+    "/home/riyad/Downloads/Compressed/arm_ws/build/arm_gazebo/catkin_generated/installspace/arm_gazeboConfig-version.cmake"
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+<<<<<<< HEAD
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/arm_gazebo" TYPE FILE FILES "/home/yididya/arm_ws/src/arm_gazebo/package.xml")
+=======
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/arm_gazebo" TYPE FILE FILES "/home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/package.xml")
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 endif()
 

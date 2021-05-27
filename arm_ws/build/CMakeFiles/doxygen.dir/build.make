@@ -43,10 +43,17 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/yididya/arm_ws/src
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/yididya/arm_ws/build
+=======
+CMAKE_SOURCE_DIR = /home/riyad/Downloads/Compressed/arm_ws/src
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/riyad/Downloads/Compressed/arm_ws/build
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 
 # Utility rule file for doxygen.
 
@@ -67,6 +74,10 @@ CMakeFiles/doxygen.dir/clean:
 .PHONY : CMakeFiles/doxygen.dir/clean
 
 CMakeFiles/doxygen.dir/depend:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yididya/arm_ws/src /home/yididya/arm_ws/src /home/yididya/arm_ws/build /home/yididya/arm_ws/build /home/yididya/arm_ws/build/CMakeFiles/doxygen.dir/DependInfo.cmake --color=$(COLOR)
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/riyad/Downloads/Compressed/arm_ws/src /home/riyad/Downloads/Compressed/arm_ws/src /home/riyad/Downloads/Compressed/arm_ws/build /home/riyad/Downloads/Compressed/arm_ws/build /home/riyad/Downloads/Compressed/arm_ws/build/CMakeFiles/doxygen.dir/DependInfo.cmake --color=$(COLOR)
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : CMakeFiles/doxygen.dir/depend
 

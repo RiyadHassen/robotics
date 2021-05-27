@@ -67,14 +67,23 @@ set(arm_gazebo_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
+<<<<<<< HEAD
   set(arm_gazebo_SOURCE_PREFIX /home/yididya/arm_ws/src/arm_gazebo)
   set(arm_gazebo_DEVEL_PREFIX /home/yididya/arm_ws/devel)
+=======
+  set(arm_gazebo_SOURCE_PREFIX /home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo)
+  set(arm_gazebo_DEVEL_PREFIX /home/riyad/Downloads/Compressed/arm_ws/devel)
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
   set(arm_gazebo_INSTALL_PREFIX "")
   set(arm_gazebo_PREFIX ${arm_gazebo_DEVEL_PREFIX})
 else()
   set(arm_gazebo_SOURCE_PREFIX "")
   set(arm_gazebo_DEVEL_PREFIX "")
+<<<<<<< HEAD
   set(arm_gazebo_INSTALL_PREFIX /home/yididya/arm_ws/install)
+=======
+  set(arm_gazebo_INSTALL_PREFIX /home/riyad/Downloads/Compressed/arm_ws/install)
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
   set(arm_gazebo_PREFIX ${arm_gazebo_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +100,15 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(arm_gazebo_FOUND_CATKIN_PROJECT TRUE)
 
+<<<<<<< HEAD
 if(NOT "include " STREQUAL " ")
   set(arm_gazebo_INCLUDE_DIRS "")
   set(_include_dirs "include")
+=======
+if(NOT " " STREQUAL " ")
+  set(arm_gazebo_INCLUDE_DIRS "")
+  set(_include_dirs "")
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -154,7 +169,11 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
+<<<<<<< HEAD
     foreach(path /home/yididya/arm_ws/install/lib;/home/yididya/arm_ws/devel/lib;/opt/ros/noetic/lib)
+=======
+    foreach(path /home/riyad/Downloads/Compressed/arm_ws/install/lib;/opt/ros/noetic/lib)
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -177,7 +196,11 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
+<<<<<<< HEAD
 set(arm_gazebo_EXPORTED_TARGETS "arm_gazebo_generate_messages_cpp;arm_gazebo_generate_messages_eus;arm_gazebo_generate_messages_lisp;arm_gazebo_generate_messages_nodejs;arm_gazebo_generate_messages_py")
+=======
+set(arm_gazebo_EXPORTED_TARGETS "")
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${arm_gazebo_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -185,7 +208,11 @@ foreach(t ${arm_gazebo_EXPORTED_TARGETS})
   endif()
 endforeach()
 
+<<<<<<< HEAD
 set(depends "geometry_msgs;roscpp;std_msgs;message_runtime;rospy;gazebo_ros;arm_lib")
+=======
+set(depends "roscpp;gazebo_ros;arm_lib")
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls
@@ -214,7 +241,11 @@ foreach(depend ${depends})
   list(APPEND arm_gazebo_EXPORTED_TARGETS ${${arm_gazebo_dep}_EXPORTED_TARGETS})
 endforeach()
 
+<<<<<<< HEAD
 set(pkg_cfg_extras "arm_gazebo-msg-extras.cmake")
+=======
+set(pkg_cfg_extras "")
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 foreach(extra ${pkg_cfg_extras})
   if(NOT IS_ABSOLUTE ${extra})
     set(extra ${arm_gazebo_DIR}/${extra})

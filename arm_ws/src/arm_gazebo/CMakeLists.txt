@@ -8,6 +8,7 @@ project(arm_gazebo)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
+<<<<<<< HEAD
   geometry_msgs
   roscpp
   std_msgs
@@ -17,6 +18,16 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   gazebo_ros
 )
+=======
+  arm_lib
+  roscpp
+  rospy
+  std_msgs
+  gazebo_ros
+
+)
+
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 find_package(gazebo REQUIRED)
 
 link_directories(${GAZEBO_LIBRARY_DIRS})
@@ -28,6 +39,11 @@ include_directories(${Boost_INCLUDE_DIR}
 
 add_library(${PROJECT_NAME} SHARED src/controller.cpp)
 target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES} ${roscpp_LIBRARIES})
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
 
@@ -62,10 +78,18 @@ target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES} ${
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
+<<<<<<< HEAD
  add_message_files(
    FILES
    angles.msg
  )
+=======
+# add_message_files(
+#   FILES
+#   Message1.msg
+#   Message2.msg
+# )
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -82,10 +106,17 @@ target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES} ${
 # )
 
 ## Generate added messages and services with any dependencies listed here
+<<<<<<< HEAD
  generate_messages(
    DEPENDENCIES
    std_msgs
  )
+=======
+# generate_messages(
+#   DEPENDENCIES
+#   std_msgs
+# )
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -118,9 +149,16 @@ target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES} ${
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
+<<<<<<< HEAD
 #  LIBRARIES transformation
   CATKIN_DEPENDS geometry_msgs roscpp std_msgs message_runtime rospy gazebo_ros arm_lib
 #  DEPENDS system_lib
+=======
+#  LIBRARIES arm_gazebo
+#  CATKIN_DEPENDS arm_lib roscpp rospy std_msgs
+#  DEPENDS system_lib
+DEPENDS roscpp gazebo_ros arm_lib
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 )
 
 ###########
@@ -129,6 +167,7 @@ catkin_package(
 
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
+<<<<<<< HEAD
 include_directories(
 # include
   ${catkin_INCLUDE_DIRS}
@@ -137,6 +176,16 @@ include_directories(
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
 #   src/${PROJECT_NAME}/transformation.cpp
+=======
+# include_directories(
+# # include
+#   ${catkin_INCLUDE_DIRS}
+# )
+
+## Declare a C++ library
+# add_library(${PROJECT_NAME}
+#   src/${PROJECT_NAME}/arm_gazebo.cpp
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 # )
 
 ## Add cmake target dependencies of the library
@@ -147,7 +196,11 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
+<<<<<<< HEAD
 # add_executable(${PROJECT_NAME}_node src/transformation_node.cpp)
+=======
+# add_executable(${PROJECT_NAME}_node src/arm_gazebo_node.cpp)
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -211,13 +264,18 @@ include_directories(
 #############
 
 ## Add gtest based cpp test target and link libraries
+<<<<<<< HEAD
 # catkin_add_gtest(${PROJECT_NAME}-test test/test_transformation.cpp)
+=======
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_arm_gazebo.cpp)
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+<<<<<<< HEAD
 
 add_executable(talker src/controller.cpp)
 target_link_libraries(talker ${catkin_LIBRARIES})
@@ -226,3 +284,5 @@ add_dependencies(talker arm_gazebo_generate_messages_cpp)
 add_executable(listener src/controller.cpp)
 target_link_libraries(listener ${catkin_LIBRARIES})
 add_dependencies(listener arm_gazebo_generate_messages_cpp)
+=======
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068

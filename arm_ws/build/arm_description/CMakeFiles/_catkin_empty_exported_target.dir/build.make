@@ -43,10 +43,17 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/yididya/arm_ws/src
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/yididya/arm_ws/build
+=======
+CMAKE_SOURCE_DIR = /home/riyad/Downloads/Compressed/arm_ws/src
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/riyad/Downloads/Compressed/arm_ws/build
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 
 # Utility rule file for _catkin_empty_exported_target.
 
@@ -63,10 +70,18 @@ arm_description/CMakeFiles/_catkin_empty_exported_target.dir/build: _catkin_empt
 .PHONY : arm_description/CMakeFiles/_catkin_empty_exported_target.dir/build
 
 arm_description/CMakeFiles/_catkin_empty_exported_target.dir/clean:
+<<<<<<< HEAD
 	cd /home/yididya/arm_ws/build/arm_description && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
 .PHONY : arm_description/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 arm_description/CMakeFiles/_catkin_empty_exported_target.dir/depend:
 	cd /home/yididya/arm_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yididya/arm_ws/src /home/yididya/arm_ws/src/arm_description /home/yididya/arm_ws/build /home/yididya/arm_ws/build/arm_description /home/yididya/arm_ws/build/arm_description/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
+=======
+	cd /home/riyad/Downloads/Compressed/arm_ws/build/arm_description && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
+.PHONY : arm_description/CMakeFiles/_catkin_empty_exported_target.dir/clean
+
+arm_description/CMakeFiles/_catkin_empty_exported_target.dir/depend:
+	cd /home/riyad/Downloads/Compressed/arm_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/riyad/Downloads/Compressed/arm_ws/src /home/riyad/Downloads/Compressed/arm_ws/src/arm_description /home/riyad/Downloads/Compressed/arm_ws/build /home/riyad/Downloads/Compressed/arm_ws/build/arm_description /home/riyad/Downloads/Compressed/arm_ws/build/arm_description/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 .PHONY : arm_description/CMakeFiles/_catkin_empty_exported_target.dir/depend
 

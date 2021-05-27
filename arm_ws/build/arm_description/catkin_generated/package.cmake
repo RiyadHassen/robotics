@@ -1,6 +1,10 @@
 set(_CATKIN_CURRENT_PACKAGE "arm_description")
 set(arm_description_VERSION "0.0.0")
+<<<<<<< HEAD
 set(arm_description_MAINTAINER "yididya <yididya@todo.todo>")
+=======
+set(arm_description_MAINTAINER "leo <leo@todo.todo>")
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 set(arm_description_PACKAGE_FORMAT "2")
 set(arm_description_BUILD_DEPENDS )
 set(arm_description_BUILD_EXPORT_DEPENDS )

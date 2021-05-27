@@ -67,14 +67,23 @@ set(arm_description_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
+<<<<<<< HEAD
   set(arm_description_SOURCE_PREFIX /home/yididya/arm_ws/src/arm_description)
   set(arm_description_DEVEL_PREFIX /home/yididya/arm_ws/devel)
+=======
+  set(arm_description_SOURCE_PREFIX /home/riyad/Downloads/Compressed/arm_ws/src/arm_description)
+  set(arm_description_DEVEL_PREFIX /home/riyad/Downloads/Compressed/arm_ws/devel)
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
   set(arm_description_INSTALL_PREFIX "")
   set(arm_description_PREFIX ${arm_description_DEVEL_PREFIX})
 else()
   set(arm_description_SOURCE_PREFIX "")
   set(arm_description_DEVEL_PREFIX "")
+<<<<<<< HEAD
   set(arm_description_INSTALL_PREFIX /home/yididya/arm_ws/install)
+=======
+  set(arm_description_INSTALL_PREFIX /home/riyad/Downloads/Compressed/arm_ws/install)
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
   set(arm_description_PREFIX ${arm_description_INSTALL_PREFIX})
 endif()
 
@@ -99,7 +108,11 @@ if(NOT " " STREQUAL " ")
   elseif(NOT " " STREQUAL " ")
     set(_report "Check the website '' for information and consider reporting the problem.")
   else()
+<<<<<<< HEAD
     set(_report "Report the problem to the maintainer 'yididya <yididya@todo.todo>' and request to fix the problem.")
+=======
+    set(_report "Report the problem to the maintainer 'leo <leo@todo.todo>' and request to fix the problem.")
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
   endif()
   foreach(idir ${_include_dirs})
     if(IS_ABSOLUTE ${idir} AND IS_DIRECTORY ${idir})
@@ -154,7 +167,11 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
+<<<<<<< HEAD
     foreach(path /home/yididya/arm_ws/install/lib;/home/yididya/arm_ws/devel/lib;/opt/ros/noetic/lib)
+=======
+    foreach(path /home/riyad/Downloads/Compressed/arm_ws/install/lib;/opt/ros/noetic/lib)
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

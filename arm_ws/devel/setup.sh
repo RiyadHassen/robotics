@@ -11,7 +11,11 @@
 
 # since this file is sourced either use the provided _CATKIN_SETUP_DIR
 # or fall back to the destination set at configure time
+<<<<<<< HEAD
 : ${_CATKIN_SETUP_DIR:=/home/yididya/arm_ws/devel}
+=======
+: ${_CATKIN_SETUP_DIR:=/home/riyad/Downloads/Compressed/arm_ws/devel}
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
 _SETUP_UTIL="$_CATKIN_SETUP_DIR/_setup_util.py"
 unset _CATKIN_SETUP_DIR
 

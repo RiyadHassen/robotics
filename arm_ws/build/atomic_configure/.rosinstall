@@ -1,2 +1,6 @@
 - setup-file:
+<<<<<<< HEAD
     local-name: /home/yididya/arm_ws/devel/setup.sh
+=======
+    local-name: /home/riyad/Downloads/Compressed/arm_ws/devel/setup.sh
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
