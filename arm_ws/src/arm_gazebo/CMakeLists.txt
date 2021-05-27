@@ -8,14 +8,15 @@ project(arm_gazebo)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
+  geometry_msgs
+  roscpp
+  std_msgs
+  message_generation
+  genmsg
   arm_lib
   roscpp
-  rospy
-  std_msgs
   gazebo_ros
-
 )
-
 find_package(gazebo REQUIRED)
 
 link_directories(${GAZEBO_LIBRARY_DIRS})
@@ -27,8 +28,6 @@ include_directories(${Boost_INCLUDE_DIR}
 
 add_library(${PROJECT_NAME} SHARED src/controller.cpp)
 target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES} ${roscpp_LIBRARIES})
-
-
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
 
@@ -63,11 +62,10 @@ target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES} ${
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-# add_message_files(
-#   FILES
-#   Message1.msg
-#   Message2.msg
-# )
+ add_message_files(
+   FILES
+   angles.msg
+ )
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -84,10 +82,10 @@ target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES} ${
 # )
 
 ## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   std_msgs
-# )
+ generate_messages(
+   DEPENDENCIES
+   std_msgs
+ )
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -120,10 +118,9 @@ target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES} ${
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES arm_gazebo
-#  CATKIN_DEPENDS arm_lib roscpp rospy std_msgs
+#  LIBRARIES transformation
+  CATKIN_DEPENDS geometry_msgs roscpp std_msgs message_runtime rospy gazebo_ros arm_lib
 #  DEPENDS system_lib
-DEPENDS roscpp gazebo_ros arm_lib
 )
 
 ###########
@@ -132,14 +129,14 @@ DEPENDS roscpp gazebo_ros arm_lib
 
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
-# include_directories(
-# # include
-#   ${catkin_INCLUDE_DIRS}
-# )
+include_directories(
+# include
+  ${catkin_INCLUDE_DIRS}
+)
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/arm_gazebo.cpp
+#   src/${PROJECT_NAME}/transformation.cpp
 # )
 
 ## Add cmake target dependencies of the library
@@ -150,7 +147,7 @@ DEPENDS roscpp gazebo_ros arm_lib
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-# add_executable(${PROJECT_NAME}_node src/arm_gazebo_node.cpp)
+# add_executable(${PROJECT_NAME}_node src/transformation_node.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -214,10 +211,18 @@ DEPENDS roscpp gazebo_ros arm_lib
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_arm_gazebo.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_transformation.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+
+add_executable(talker src/controller.cpp)
+target_link_libraries(talker ${catkin_LIBRARIES})
+add_dependencies(talker arm_gazebo_generate_messages_cpp)
+
+add_executable(listener src/controller.cpp)
+target_link_libraries(listener ${catkin_LIBRARIES})
+add_dependencies(listener arm_gazebo_generate_messages_cpp)

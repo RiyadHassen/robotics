@@ -8,3 +8,4 @@
 
 # modified environment variables
 export PWD='/home/yididya/arm_ws/build'
+export PYTHONPATH="/home/yididya/arm_ws/devel/lib/python3/dist-packages:$PYTHONPATH"

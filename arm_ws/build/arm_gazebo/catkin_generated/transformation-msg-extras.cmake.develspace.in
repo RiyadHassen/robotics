@@ -1,0 +1,2 @@
+set(transformation_MESSAGE_FILES "/home/yididya/arm_ws/src/arm_gazebo/msg/angles.msg")
+set(transformation_SERVICE_FILES "")

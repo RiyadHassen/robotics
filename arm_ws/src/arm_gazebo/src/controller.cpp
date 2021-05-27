@@ -5,6 +5,7 @@
 #include <ignition/math/Vector3.hh>
 #include <iostream>
 #include <sstream>
+#include "arm_gazebo/angles.h"
 namespace gazebo
 {
   class Modelpush : public ModelPlugin
@@ -46,10 +47,10 @@ namespace gazebo
         (physics::JointState(this->model->GetJoint("base_arm1_joint")).Position(0))*(180.0 / M_PI),
         (physics::JointState(this->model->GetJoint("arm1_arm2_joint")).Position(0))*(180.0 / M_PI),
         (physics::JointState(this->model->GetJoint("arm2_arm3_joint")).Position(0))*(180.0 / M_PI),
-        (physics::JointState(this->model->GetJoint("arm3_arm4_joint")).Position(0)*(180.0 / M_PI))
+        (physics::JointState(this->model->GetJoint("arm3_arm4_joint")).Position(0))*(180.0 / M_PI))
       ]
-        publish_angels(and)
-          std::string name = this->model->GetJoint(joint_name)->GetScopedName();
+        publish_angels(ang)
+        ros::spinOnce();
 
       // this->jointController->SetPositionPID(name,pid);
 
