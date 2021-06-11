@@ -1,0 +1,18 @@
+<<<<<<< HEAD
+prefix=/home/yididya/arm_ws/install
+=======
+prefix=/home/riyad/Downloads/Compressed/arm_ws/install
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
+
+Name: arm_gazebo
+Description: Description of arm_gazebo
+Version: 0.0.0
+<<<<<<< HEAD
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: geometry_msgs roscpp std_msgs message_runtime rospy gazebo_ros arm_lib
+=======
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp gazebo_ros arm_lib
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068

@@ -1,0 +1,94 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+<<<<<<< HEAD
+Change Dir: /home/yididya/arm_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_24acd/fast && /usr/bin/make -f CMakeFiles/cmTC_24acd.dir/build.make CMakeFiles/cmTC_24acd.dir/build
+make[1]: Entering directory '/home/yididya/arm_ws/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_24acd.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_24acd.dir/src.c.o   -c /home/yididya/arm_ws/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_24acd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_24acd.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_24acd.dir/src.c.o  -o cmTC_24acd 
+/usr/bin/ld: CMakeFiles/cmTC_24acd.dir/src.c.o: in function `main':
+=======
+Change Dir: /home/riyad/Downloads/Compressed/arm_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c6599/fast && /usr/bin/make -f CMakeFiles/cmTC_c6599.dir/build.make CMakeFiles/cmTC_c6599.dir/build
+make[1]: Entering directory '/home/riyad/Downloads/Compressed/arm_ws/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c6599.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_c6599.dir/src.c.o   -c /home/riyad/Downloads/Compressed/arm_ws/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_c6599
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c6599.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_c6599.dir/src.c.o  -o cmTC_c6599 
+/usr/bin/ld: CMakeFiles/cmTC_c6599.dir/src.c.o: in function `main':
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+<<<<<<< HEAD
+make[1]: *** [CMakeFiles/cmTC_24acd.dir/build.make:87: cmTC_24acd] Error 1
+make[1]: Leaving directory '/home/yididya/arm_ws/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_24acd/fast] Error 2
+=======
+make[1]: *** [CMakeFiles/cmTC_c6599.dir/build.make:87: cmTC_c6599] Error 1
+make[1]: Leaving directory '/home/riyad/Downloads/Compressed/arm_ws/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_c6599/fast] Error 2
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+<<<<<<< HEAD
+Change Dir: /home/yididya/arm_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_8ab0f/fast && /usr/bin/make -f CMakeFiles/cmTC_8ab0f.dir/build.make CMakeFiles/cmTC_8ab0f.dir/build
+make[1]: Entering directory '/home/yididya/arm_ws/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8ab0f.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_8ab0f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_8ab0f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8ab0f.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_8ab0f.dir/CheckFunctionExists.c.o  -o cmTC_8ab0f  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_8ab0f.dir/build.make:87: cmTC_8ab0f] Error 1
+make[1]: Leaving directory '/home/yididya/arm_ws/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_8ab0f/fast] Error 2
+=======
+Change Dir: /home/riyad/Downloads/Compressed/arm_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_94dd9/fast && /usr/bin/make -f CMakeFiles/cmTC_94dd9.dir/build.make CMakeFiles/cmTC_94dd9.dir/build
+make[1]: Entering directory '/home/riyad/Downloads/Compressed/arm_ws/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_94dd9.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_94dd9.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_94dd9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_94dd9.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_94dd9.dir/CheckFunctionExists.c.o  -o cmTC_94dd9  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_94dd9.dir/build.make:87: cmTC_94dd9] Error 1
+make[1]: Leaving directory '/home/riyad/Downloads/Compressed/arm_ws/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_94dd9/fast] Error 2
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
+
+
+

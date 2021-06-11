@@ -1,0 +1,12 @@
+<<<<<<< HEAD
+prefix=/home/yididya/arm_ws/devel
+=======
+prefix=/home/riyad/Downloads/Compressed/arm_ws/devel
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
+
+Name: arm_lib
+Description: Description of arm_lib
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

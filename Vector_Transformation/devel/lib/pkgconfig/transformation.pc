@@ -1,0 +1,8 @@
+prefix=/home/yididya/Vector_Transformation/devel
+
+Name: transformation
+Description: Description of transformation
+Version: 0.0.0
+Cflags: -I/home/yididya/Vector_Transformation/devel/include
+Libs: -L${prefix}/lib 
+Requires: geometry_msgs roscpp std_msgs message_runtime rospy

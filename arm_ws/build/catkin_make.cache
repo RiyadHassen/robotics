@@ -1,0 +1,6 @@
+arm_description:arm_gazebo:arm_lib
+<<<<<<< HEAD
+-DCATKIN_DEVEL_PREFIX=/home/yididya/arm_ws/devel -DCMAKE_INSTALL_PREFIX=/home/yididya/arm_ws/install -G Unix Makefiles
+=======
+-DCATKIN_DEVEL_PREFIX=/home/riyad/Downloads/Compressed/arm_ws/devel -DCMAKE_INSTALL_PREFIX=/home/riyad/Downloads/Compressed/arm_ws/install -G Unix Makefiles
+>>>>>>> 483760400e61e7a869d19143084f3385f37d4068
