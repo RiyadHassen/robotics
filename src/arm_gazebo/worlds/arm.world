@@ -8,5 +8,8 @@
         <include>
             <uri>model://sun</uri>
         </include>
+        <!-- <include>
+            <uri>model://arm_description</uri>
+        </include> -->
     </world>
 </sdf>
