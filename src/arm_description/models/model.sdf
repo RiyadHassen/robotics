@@ -158,7 +158,7 @@
             <visual name="visual">
                 <geometry>
                     <box>
-                        <size>0.1 0.3 0.1</size>
+                        <size>0.1 0.5 0.1</size>
                     </box>
                 </geometry>
                 <material>
@@ -166,7 +166,7 @@
                 </material>
             </visual>
         </link>
-        <link name="left_finger_tip">
+        <!-- <link name="left_finger_tip">
             <pose>0.336 0.3 3.2 0 0 1.5707</pose>
             <inertial>
                 <inertia>
@@ -196,7 +196,7 @@
                     <script>Gazebo/Blue</script>
                 </material>
             </visual>
-        </link>
+        </link> -->
         <link name="right_finger">
             <pose>0.1 -0.2 3.2 0 0 .78539</pose>
             <inertial>
@@ -220,7 +220,7 @@
             <visual name="visual">
                 <geometry>
                     <box>
-                        <size>0.1 0.3 0.1</size>
+                        <size>0.1 0.5 0.1</size>
                     </box>
                 </geometry>
                 <material>
@@ -228,7 +228,7 @@
                 </material>
             </visual>
         </link>
-        <link name="right_finger_tip">
+        <!-- <link name="right_finger_tip">
             <pose>0.336 -0.3 3.2 0 0 1.5707</pose>
             <inertial>
                 <inertia>
@@ -258,7 +258,7 @@
                     <script>Gazebo/Green</script>
                 </material>
             </visual>
-        </link>
+        </link> -->
         <!-- joints-->
         <joint type="revolute" name="chasis_arm1_joint">
             <pose>0 0 -0.025 0 0 0</pose>
@@ -297,13 +297,13 @@
             <parent>palm</parent>
             <axis>
                 <limit>
-                    <lower>-0.4</lower>
-                    <upper>0.4</upper>
+                    <lower>-0.7</lower>
+                    <upper>0.7</upper>
                 </limit>
                 <xyz>0 0 1</xyz>
             </axis>
         </joint>
-        <joint name="left_finger_tip" type="revolute">
+        <!-- <joint name="left_finger_tip" type="revolute">
             <pose>0 0.1 0 0 0 0</pose>
             <child>left_finger_tip</child>
             <parent>left_finger</parent>
@@ -314,20 +314,20 @@
                 </limit>
                 <xyz>0 0 1</xyz>
             </axis>
-        </joint>
+        </joint> -->
         <joint name="palm_right_finger" type="revolute">
             <pose>0 0.15 0 0 0 0</pose>
             <child>right_finger</child>
             <parent>palm</parent>
             <axis>
                 <limit>
-                    <lower>-0.4</lower>
-                    <upper>0.4</upper>
+                    <lower>-0.7</lower>
+                    <upper>0.7</upper>
                 </limit>
                 <xyz>0 0 1</xyz>
             </axis>
         </joint>
-        <joint name="right_finger_tip" type="revolute">
+        <!-- <joint name="right_finger_tip" type="revolute">
             <pose>0 0.1 0 0 0 0</pose>
             <child>right_finger_tip</child>
             <parent>right_finger</parent>
@@ -338,7 +338,7 @@
                 </limit>
                 <xyz>0 0 1</xyz>
             </axis>
-        </joint>
+        </joint> -->
         <joint name="palm_riser" type="revolute">
             <child>palm</child>
             <parent>arm3</parent>
