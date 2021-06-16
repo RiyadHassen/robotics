@@ -1,17 +1,32 @@
 import numpy as np
+import rospy
+from arm_gazebo.srv import fk,fkResponse
 
 
 
 
 
+def fkhandler(request):
+    joint_angles = request.joint_angles
+    link_lengths = request.link_lengths 
+    M1 = Rz(joint_angles[0]).dot(Tz(link_lengths[0]))
+    M2 = M1.dot(Rx(joint_angles[1])).dot(Tz(link_lengths[1]))
+    M3 = M2.dot(Rx(joint_angles[2])).dot(Tz(link_lengths[2]))
+    M4 = M3.dot(Rx(joint_angles[3])).dot(Tz(link_lengths[3]))
+    M5 = M4.dot(Ry(joint_angles[4])).dot(Tz(link_lengths[4]))
+    M6 = M5.dot(Rz(joint_angles[5])).dot(Tz(link_lengths[5]))
+    M7 = M6.dot(Tx(link_lengths[6] / 2))
 
-M1 = translatez(0.1)
-M2 = rotatez(np.radians(60)).dot(translatez(0.05))
-M3 = rotatex(np.radians(30)).dot(translatez(2))
-M4 = rotatex(np.radians(-45)).dot(translatez(1))
-M5 = rotatex(np.radians(-30)).dot(translatez(0.5))
-M = (((M1.dot(M2)).dot(M3)).dot(M4)).dot(M5)
-print(M)
+    acutator_pose = np.array([M7[0][3], M7[1][3], M7[2][3]])
+
+    print("Returning: ", acutator_pose)
+    return fkResponse(acutator_pose)
+
+def FK_Server():
+    rospy.init_node('fk_server')
+    s = rospy.Service('FK', fk, fkhandler)
+    print("Ready to FK.")
+    rospy.spin()
 
 
 def rotatex(rad):
@@ -60,4 +75,5 @@ def translatex(d):
 
 
 
-
+if __name__=="__main__":
+    FK_Server()
