@@ -132,6 +132,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/riyad/Downloads/Compressed/arm_ws/build/gtest/cmake_install.cmake")
   include("/home/riyad/Downloads/Compressed/arm_ws/build/arm_description/cmake_install.cmake")
+  include("/home/riyad/Downloads/Compressed/arm_ws/build/box_description/cmake_install.cmake")
   include("/home/riyad/Downloads/Compressed/arm_ws/build/arm_lib/cmake_install.cmake")
   include("/home/riyad/Downloads/Compressed/arm_ws/build/arm_gazebo/cmake_install.cmake")
 

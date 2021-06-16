@@ -1,0 +1,8 @@
+prefix=/home/riyad/Downloads/Compressed/arm_ws/install
+
+Name: box_description
+Description: Description of box_description
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

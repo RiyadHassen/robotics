@@ -331,8 +331,15 @@
             </axis>
         </joint>
 
-        <!-- <plugin name="arm_control" filename="libarm_gazebo.so" /> -->
-
+        
+        <joint name="palm_riser" type="revolute">
+            <pose>0 0 -0.05 0 0 0</pose>
+            <child>palm</child>
+            <parent>arm5</parent>
+            <axis>
+                <xyz>0 0 1</xyz>
+            </axis>
+        </joint>
 
 
         <!-- new jointed -->
@@ -384,14 +391,6 @@
                 <xyz>0 0 1</xyz>
             </axis>
         </joint> -->
-        <joint name="palm_riser" type="revolute">
-            <pose>0 0 -0.05 0 0 0</pose>
-            <child>palm</child>
-            <parent>arm5</parent>
-            <axis>
-                <xyz>0 0 1</xyz>
-            </axis>
-        </joint>
-
+        <plugin name="arm_control" filename="libarm_gazebo.so" />
     </model>
 </sdf>

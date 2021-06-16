@@ -1,6 +1,6 @@
 set(_CATKIN_CURRENT_PACKAGE "arm_description")
 set(arm_description_VERSION "0.0.0")
-set(arm_description_MAINTAINER "leo <leo@todo.todo>")
+set(arm_description_MAINTAINER "riyad_worku <riyad_worku@todo.todo>")
 set(arm_description_PACKAGE_FORMAT "2")
 set(arm_description_BUILD_DEPENDS )
 set(arm_description_BUILD_EXPORT_DEPENDS )

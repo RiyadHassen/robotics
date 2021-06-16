@@ -1,2 +1,2 @@
-arm_description:arm_gazebo:arm_lib
+arm_description:arm_gazebo:arm_lib:box_description
 -DCATKIN_DEVEL_PREFIX=/home/riyad/Downloads/Compressed/arm_ws/devel -DCMAKE_INSTALL_PREFIX=/home/riyad/Downloads/Compressed/arm_ws/install -G Unix Makefiles

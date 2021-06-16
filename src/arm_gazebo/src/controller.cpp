@@ -18,44 +18,85 @@ namespace gazebo
 			this->jointController = this->model->GetJointController();
 
 			// // set your PID values
-			this->pid = common::PID(30.1, 10.01, 10.03);
+			this->pid = common::PID(70.1, 10.01, 10.03);
+			// std::string name = this->model->GetJoint("arm1_arm2_joint")->GetScopedName();
+			// this->jointController->SetPositionPID(name, pid);
 
-			auto joint_name = "arm1_arm2_joint";
+			std::string joint1 = this->model->GetJoint("arm1_arm2_joint")->GetScopedName();
+			std::string joint2 = this->model->GetJoint("arm2_arm3_joint")->GetScopedName();
+			std::string joint3 = this->model->GetJoint("arm3_arm4_joint")->GetScopedName();
+			std::string joint4 = this->model->GetJoint("arm4_arm5_joint")->GetScopedName();
+			
 
-			std::string name = this->model->GetJoint("arm1_arm2_joint")->GetScopedName();
 
-			this->jointController->SetPositionPID(name, pid);
-
+			this->SetPID(joint1, pid);
+		  	this->SetPID(joint2, pid);
+			this->SetPID(joint3, pid);
+			this->SetPID(joint4, pid);
+		  	
+			
+			
 			// Listen to the update event. This event is broadcast every
 			// simulation iteration.
 			this->updateConnection = event::Events::ConnectWorldUpdateBegin(
 				std::bind(&ModelPush::OnUpdate, this));
+
+		
 		}
 
 		// Called by the world update start event
 	public:
 		void OnUpdate()
 		{
-			float angleDegree = -90;
-			float rad = M_PI * angleDegree / 180;
-
-			std::string name = this->model->GetJoint("arm1_arm2_joint")->GetScopedName();
-			// this->jointController->SetPositionPID(name, pid);
-			// this->jointController->SetPositionTarget(name, rad);
-			// this->jointController->Update();
-
-			// Get joint position by index. 
-			// 0 returns rotation accross X axis
-			// 1 returns rotation accross Y axis
-			// 2 returns rotation accross Z axis
-			// If the Joint has only Z axis for rotation, 0 returns that value and 1 and 2 return nan
-			double a1 = physics::JointState(this->model->GetJoint("arm1_arm2_joint")).Position(0);
-			// double a2 = this->model->GetJoint("chasis_arm1_joint").Position(0);
-			// double a3 = physics::JointState(this->model->GetJoint("chasis_arm1_joint")).Position(2);
-			std::cout << "Current arm1_arm2_joint values: " << a1 * 180.0 / M_PI << std::endl;
+			catchBox();
+			releaseBox();
+			
+		}
+	private:
+		void SetPID(std::string jointName, common::PID _pid)
+		{
+			this->jointController->SetPositionPID(jointName, _pid);
+		}
+	private:
+		double GetAngle(std::string jointName)
+		{
+			return physics::JointState(this->model->GetJoint(jointName)).Position();
 		}
 
+	private:
+		void SetAngle(std::string jointName, double _angle)
+		{
+			this->jointController->SetPositionTarget(jointName, _angle);
+		}
 		// a pointer that points to a model object
+
+	public:
+		void catchBox()
+		{
+			
+			this->pid = common::PID(10.1, 3.01, 3.03);
+			std::string palmjoinleft = this->model->GetJoint("palm_left_finger")->GetScopedName();
+			std::string palmjointright = this->model->GetJoint("palm_right_finger")->GetScopedName();
+			this->SetPID(palmjoinleft,pid);
+			this->SetAngle(palmjoinleft, -1);
+			this->SetPID(palmjointright, pid);
+			this->SetAngle(palmjointright, 1);
+		}
+
+	public:
+		void releaseBox()
+		{
+			
+			this->pid = common::PID(10.1, 3.01, 3.03);
+			std::string palmjoinleft = this->model->GetJoint("palm_left_finger")->GetScopedName();
+			std::string palmjointright = this->model->GetJoint("palm_right_finger")->GetScopedName();
+			common::PID _pid = common::PID(10.0, 5.0, 2.0);
+			this->SetPID(palmjoinleft, pid);
+			this->SetAngle(palmjoinleft, 1);
+			this->SetPID(palmjointright, pid);
+			this->SetAngle(palmjointright, -1);
+		}
+
 	private:
 		physics::ModelPtr model;
 
@@ -72,6 +113,7 @@ namespace gazebo
 	private:
 		common::PID pid;
 	};
+
 
 	// Register this plugin with the simulator
 	GZ_REGISTER_MODEL_PLUGIN(ModelPush)

@@ -11,5 +11,6 @@ export CMAKE_PREFIX_PATH="/home/riyad/Downloads/Compressed/arm_ws/devel:$CMAKE_P
 export LD_LIBRARY_PATH="/home/riyad/Downloads/Compressed/arm_ws/devel/lib:$LD_LIBRARY_PATH"
 export PKG_CONFIG_PATH="/home/riyad/Downloads/Compressed/arm_ws/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/riyad/Downloads/Compressed/arm_ws/build'
+export PYTHONPATH="/home/riyad/Downloads/Compressed/arm_ws/devel/lib/python3/dist-packages:$PYTHONPATH"
 export ROSLISP_PACKAGE_DIRECTORIES='/home/riyad/Downloads/Compressed/arm_ws/devel/share/common-lisp'
 export ROS_PACKAGE_PATH="/home/riyad/Downloads/Compressed/arm_ws/src:$ROS_PACKAGE_PATH"
