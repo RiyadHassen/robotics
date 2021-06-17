@@ -5,6 +5,7 @@
 #include <ignition/math/Vector3.hh>
 #include <iostream>
 #include <thread>
+#include "ros/callback_queue.h"
 #include "ros/ros.h"
 #include "arm_gazebo/ik.h"
 #include "arm_gazebo/fk.h"
@@ -148,9 +149,28 @@ namespace gazebo
 			this->SetAngle(joint4, joint_angles[4]);
 
 			this->SetPID(joint5, joint6PID);
-			this->SetAngle(join5, joint_angles[5]);
+			this->SetAngle(joint5, joint_angles[5]);
 
 			this->jointController->Update();
+		}
+	private:
+		std::vector<double> InverseKinematics(std::vector<double> _pose)
+		{
+			ros::NodeHandle n;
+			ros::ServiceClient ik_client = n.serviceClient<arm_gazebo::ik>("IK");
+			arm_gazebo::ik ik_srv;
+
+			ik_srv.request.desired_pose = {_pose[0], _pose[1], _pose[2]};
+			std::vector<double> angles;
+			if (ik_client.call(ik_srv))
+			{
+				angles = ik_srv.response.joint_angles;
+			}
+			else
+			{
+				ROS_ERROR("Failed to call service transform_vector");
+			}
+			return angles;
 		}
 
 	private:
@@ -168,6 +188,18 @@ namespace gazebo
 		// // 	// PID object
 	private:
 		common::PID pid;
+	private:
+		std::unique_ptr<ros::NodeHandle> rosNode;
+
+	private:
+		ros::Subscriber rosSub;
+
+	private:
+		ros::CallbackQueue rosQueue;
+
+	private:
+		std::thread rosQueueThread;
+
 	};
 
 
