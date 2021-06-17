@@ -53,25 +53,33 @@ CMAKE_BINARY_DIR = /home/riyad/Downloads/Compressed/arm_ws/build
 # Include the progress variables for this target.
 include arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/progress.make
 
+arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp: /home/riyad/Downloads/Compressed/arm_ws/devel/include/arm_gazebo/pose.h
 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp: /home/riyad/Downloads/Compressed/arm_ws/devel/include/arm_gazebo/fk.h
 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp: /home/riyad/Downloads/Compressed/arm_ws/devel/include/arm_gazebo/ik.h
 
+
+/home/riyad/Downloads/Compressed/arm_ws/devel/include/arm_gazebo/pose.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/riyad/Downloads/Compressed/arm_ws/devel/include/arm_gazebo/pose.h: /home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/msg/pose.msg
+/home/riyad/Downloads/Compressed/arm_ws/devel/include/arm_gazebo/pose.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/riyad/Downloads/Compressed/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from arm_gazebo/pose.msg"
+	cd /home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo && /home/riyad/Downloads/Compressed/arm_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/msg/pose.msg -Iarm_gazebo:/home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_gazebo -o /home/riyad/Downloads/Compressed/arm_ws/devel/include/arm_gazebo -e /opt/ros/noetic/share/gencpp/cmake/..
 
 /home/riyad/Downloads/Compressed/arm_ws/devel/include/arm_gazebo/fk.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/riyad/Downloads/Compressed/arm_ws/devel/include/arm_gazebo/fk.h: /home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/srv/fk.srv
 /home/riyad/Downloads/Compressed/arm_ws/devel/include/arm_gazebo/fk.h: /opt/ros/noetic/share/gencpp/msg.h.template
 /home/riyad/Downloads/Compressed/arm_ws/devel/include/arm_gazebo/fk.h: /opt/ros/noetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/riyad/Downloads/Compressed/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from arm_gazebo/fk.srv"
-	cd /home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo && /home/riyad/Downloads/Compressed/arm_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/srv/fk.srv -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_gazebo -o /home/riyad/Downloads/Compressed/arm_ws/devel/include/arm_gazebo -e /opt/ros/noetic/share/gencpp/cmake/..
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/riyad/Downloads/Compressed/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from arm_gazebo/fk.srv"
+	cd /home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo && /home/riyad/Downloads/Compressed/arm_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/srv/fk.srv -Iarm_gazebo:/home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_gazebo -o /home/riyad/Downloads/Compressed/arm_ws/devel/include/arm_gazebo -e /opt/ros/noetic/share/gencpp/cmake/..
 
 /home/riyad/Downloads/Compressed/arm_ws/devel/include/arm_gazebo/ik.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/riyad/Downloads/Compressed/arm_ws/devel/include/arm_gazebo/ik.h: /home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/srv/ik.srv
 /home/riyad/Downloads/Compressed/arm_ws/devel/include/arm_gazebo/ik.h: /opt/ros/noetic/share/gencpp/msg.h.template
 /home/riyad/Downloads/Compressed/arm_ws/devel/include/arm_gazebo/ik.h: /opt/ros/noetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/riyad/Downloads/Compressed/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from arm_gazebo/ik.srv"
-	cd /home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo && /home/riyad/Downloads/Compressed/arm_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/srv/ik.srv -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_gazebo -o /home/riyad/Downloads/Compressed/arm_ws/devel/include/arm_gazebo -e /opt/ros/noetic/share/gencpp/cmake/..
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/riyad/Downloads/Compressed/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from arm_gazebo/ik.srv"
+	cd /home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo && /home/riyad/Downloads/Compressed/arm_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/srv/ik.srv -Iarm_gazebo:/home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_gazebo -o /home/riyad/Downloads/Compressed/arm_ws/devel/include/arm_gazebo -e /opt/ros/noetic/share/gencpp/cmake/..
 
 arm_gazebo_generate_messages_cpp: arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp
+arm_gazebo_generate_messages_cpp: /home/riyad/Downloads/Compressed/arm_ws/devel/include/arm_gazebo/pose.h
 arm_gazebo_generate_messages_cpp: /home/riyad/Downloads/Compressed/arm_ws/devel/include/arm_gazebo/fk.h
 arm_gazebo_generate_messages_cpp: /home/riyad/Downloads/Compressed/arm_ws/devel/include/arm_gazebo/ik.h
 arm_gazebo_generate_messages_cpp: arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_cpp.dir/build.make

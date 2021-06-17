@@ -8,6 +8,7 @@ arm_gazebo/CMakeFiles/arm_gazebo.dir/src/controller.cpp.o
  /home/riyad/Downloads/Compressed/arm_ws/devel/include/arm_gazebo/ik.h
  /home/riyad/Downloads/Compressed/arm_ws/devel/include/arm_gazebo/ikRequest.h
  /home/riyad/Downloads/Compressed/arm_ws/devel/include/arm_gazebo/ikResponse.h
+ /home/riyad/Downloads/Compressed/arm_ws/devel/include/arm_gazebo/pose.h
  /home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/src/controller.cpp
  /opt/ros/noetic/include/ros/advertise_options.h
  /opt/ros/noetic/include/ros/advertise_service_options.h

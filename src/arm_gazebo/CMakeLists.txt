@@ -27,6 +27,10 @@ FILES
 fk.srv
 ik.srv
 )
+add_message_files(
+  FILES
+  pose.msg
+)
 
 generate_messages(
 DEPENDENCIES

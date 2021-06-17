@@ -7,6 +7,7 @@
 #include <thread>
 #include "ros/callback_queue.h"
 #include "ros/ros.h"
+#include "arm_gazebo/pose.h"
 #include "arm_gazebo/ik.h"
 #include "arm_gazebo/fk.h"
 namespace gazebo
@@ -46,11 +47,21 @@ namespace gazebo
 						  ros::init_options::NoSigintHandler);
 			}
 			this->rosNode.reset(new ros::NodeHandle("gazebo_client"));
+			
+			// Create a named topic, and subscribe to it.
+			ros::SubscribeOptions so =
+				ros::SubscribeOptions::create<arm_gazebo::pose>(
+					"/" + this->model->GetName() + "/pose_cmd",
+					1,
+					boost::bind(&ModelPush::OnRosMsg, this, _1),
+					ros::VoidPtr(), &this->rosQueue);
 
-			
-			
-			
-			
+			this->rosSub = this->rosNode->subscribe(so);
+
+			// Spin up the queue helper thread.
+			this->rosQueueThread = std::thread(std::bind(&ModelPush::QueueThread, this));
+
+	
 			// Listen to the update event. This event is broadcast every
 			// simulation iteration.
 			this->updateConnection = event::Events::ConnectWorldUpdateBegin(
@@ -68,6 +79,17 @@ namespace gazebo
 			releaseBox();
 			
 		}
+
+	private:
+		void QueueThread()
+		{
+			static const double timeout = 0.01;
+			while (this->rosNode->ok())
+			{
+				this->rosQueue.callAvailable(ros::WallDuration(timeout));
+			}
+		}
+	
 	private:
 		void SetPID(std::string jointName, common::PID _pid)
 		{
@@ -172,7 +194,18 @@ namespace gazebo
 			}
 			return angles;
 		}
-
+    private:
+		void OnRosMsg(const arm_gazebo::poseConstPtr _pose)
+		{
+			if (_pose->option == 1)
+			{
+				catchBox();
+			}
+			else if(_pose->option == 0)
+			{
+				releaseBox();
+			}
+		}
 	private:
 		physics::ModelPtr model;
 

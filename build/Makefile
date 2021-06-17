@@ -727,6 +727,19 @@ arm_gazebo_geneus/fast:
 .PHONY : arm_gazebo_geneus/fast
 
 #=============================================================================
+# Target rules for targets named arm_gazebo_generate_messages_eus
+
+# Build rule for target.
+arm_gazebo_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 arm_gazebo_generate_messages_eus
+.PHONY : arm_gazebo_generate_messages_eus
+
+# fast build rule for target.
+arm_gazebo_generate_messages_eus/fast:
+	$(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/build
+.PHONY : arm_gazebo_generate_messages_eus/fast
+
+#=============================================================================
 # Target rules for targets named actionlib_msgs_generate_messages_cpp
 
 # Build rule for target.
@@ -816,6 +829,19 @@ actionlib_generate_messages_lisp: cmake_check_build_system
 actionlib_generate_messages_lisp/fast:
 	$(MAKE) -f arm_gazebo/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make arm_gazebo/CMakeFiles/actionlib_generate_messages_lisp.dir/build
 .PHONY : actionlib_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named _arm_gazebo_generate_messages_check_deps_pose
+
+# Build rule for target.
+_arm_gazebo_generate_messages_check_deps_pose: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _arm_gazebo_generate_messages_check_deps_pose
+.PHONY : _arm_gazebo_generate_messages_check_deps_pose
+
+# fast build rule for target.
+_arm_gazebo_generate_messages_check_deps_pose/fast:
+	$(MAKE) -f arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_pose.dir/build.make arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_pose.dir/build
+.PHONY : _arm_gazebo_generate_messages_check_deps_pose/fast
 
 #=============================================================================
 # Target rules for targets named arm_gazebo_generate_messages_py
@@ -1493,19 +1519,6 @@ _arm_gazebo_generate_messages_check_deps_ik/fast:
 	$(MAKE) -f arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/build.make arm_gazebo/CMakeFiles/_arm_gazebo_generate_messages_check_deps_ik.dir/build
 .PHONY : _arm_gazebo_generate_messages_check_deps_ik/fast
 
-#=============================================================================
-# Target rules for targets named arm_gazebo_generate_messages_eus
-
-# Build rule for target.
-arm_gazebo_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 arm_gazebo_generate_messages_eus
-.PHONY : arm_gazebo_generate_messages_eus
-
-# fast build rule for target.
-arm_gazebo_generate_messages_eus/fast:
-	$(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_eus.dir/build
-.PHONY : arm_gazebo_generate_messages_eus/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1562,6 +1575,7 @@ help:
 	@echo "... arm_gazebo_genlisp"
 	@echo "... arm_gazebo_generate_messages_lisp"
 	@echo "... arm_gazebo_geneus"
+	@echo "... arm_gazebo_generate_messages_eus"
 	@echo "... actionlib_msgs_generate_messages_cpp"
 	@echo "... actionlib_generate_messages_nodejs"
 	@echo "... gazebo_msgs_generate_messages_nodejs"
@@ -1569,6 +1583,7 @@ help:
 	@echo "... trajectory_msgs_generate_messages_nodejs"
 	@echo "... actionlib_msgs_generate_messages_py"
 	@echo "... actionlib_generate_messages_lisp"
+	@echo "... _arm_gazebo_generate_messages_check_deps_pose"
 	@echo "... arm_gazebo_generate_messages_py"
 	@echo "... sensor_msgs_generate_messages_cpp"
 	@echo "... tf_generate_messages_nodejs"
@@ -1621,7 +1636,6 @@ help:
 	@echo "... _arm_gazebo_generate_messages_check_deps_fk"
 	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... _arm_gazebo_generate_messages_check_deps_ik"
-	@echo "... arm_gazebo_generate_messages_eus"
 .PHONY : help
 
 

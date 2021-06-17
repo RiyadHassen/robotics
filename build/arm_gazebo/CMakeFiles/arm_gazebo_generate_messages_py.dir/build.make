@@ -53,30 +53,47 @@ CMAKE_BINARY_DIR = /home/riyad/Downloads/Compressed/arm_ws/build
 # Include the progress variables for this target.
 include arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_py.dir/progress.make
 
+arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_py: /home/riyad/Downloads/Compressed/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/_pose.py
 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_py: /home/riyad/Downloads/Compressed/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv/_fk.py
 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_py: /home/riyad/Downloads/Compressed/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv/_ik.py
+arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_py: /home/riyad/Downloads/Compressed/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/__init__.py
 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_py: /home/riyad/Downloads/Compressed/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv/__init__.py
 
 
+/home/riyad/Downloads/Compressed/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/_pose.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/riyad/Downloads/Compressed/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/_pose.py: /home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/msg/pose.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/riyad/Downloads/Compressed/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG arm_gazebo/pose"
+	cd /home/riyad/Downloads/Compressed/arm_ws/build/arm_gazebo && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/msg/pose.msg -Iarm_gazebo:/home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_gazebo -o /home/riyad/Downloads/Compressed/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg
+
 /home/riyad/Downloads/Compressed/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv/_fk.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
 /home/riyad/Downloads/Compressed/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv/_fk.py: /home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/srv/fk.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/riyad/Downloads/Compressed/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code from SRV arm_gazebo/fk"
-	cd /home/riyad/Downloads/Compressed/arm_ws/build/arm_gazebo && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/srv/fk.srv -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_gazebo -o /home/riyad/Downloads/Compressed/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/riyad/Downloads/Compressed/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python code from SRV arm_gazebo/fk"
+	cd /home/riyad/Downloads/Compressed/arm_ws/build/arm_gazebo && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/srv/fk.srv -Iarm_gazebo:/home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_gazebo -o /home/riyad/Downloads/Compressed/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv
 
 /home/riyad/Downloads/Compressed/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv/_ik.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
 /home/riyad/Downloads/Compressed/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv/_ik.py: /home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/srv/ik.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/riyad/Downloads/Compressed/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python code from SRV arm_gazebo/ik"
-	cd /home/riyad/Downloads/Compressed/arm_ws/build/arm_gazebo && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/srv/ik.srv -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_gazebo -o /home/riyad/Downloads/Compressed/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/riyad/Downloads/Compressed/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python code from SRV arm_gazebo/ik"
+	cd /home/riyad/Downloads/Compressed/arm_ws/build/arm_gazebo && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/srv/ik.srv -Iarm_gazebo:/home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_gazebo -o /home/riyad/Downloads/Compressed/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv
+
+/home/riyad/Downloads/Compressed/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/riyad/Downloads/Compressed/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/__init__.py: /home/riyad/Downloads/Compressed/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/_pose.py
+/home/riyad/Downloads/Compressed/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/__init__.py: /home/riyad/Downloads/Compressed/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv/_fk.py
+/home/riyad/Downloads/Compressed/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/__init__.py: /home/riyad/Downloads/Compressed/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv/_ik.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/riyad/Downloads/Compressed/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python msg __init__.py for arm_gazebo"
+	cd /home/riyad/Downloads/Compressed/arm_ws/build/arm_gazebo && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/riyad/Downloads/Compressed/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg --initpy
 
 /home/riyad/Downloads/Compressed/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/riyad/Downloads/Compressed/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv/__init__.py: /home/riyad/Downloads/Compressed/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/_pose.py
 /home/riyad/Downloads/Compressed/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv/__init__.py: /home/riyad/Downloads/Compressed/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv/_fk.py
 /home/riyad/Downloads/Compressed/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv/__init__.py: /home/riyad/Downloads/Compressed/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv/_ik.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/riyad/Downloads/Compressed/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python srv __init__.py for arm_gazebo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/riyad/Downloads/Compressed/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python srv __init__.py for arm_gazebo"
 	cd /home/riyad/Downloads/Compressed/arm_ws/build/arm_gazebo && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/riyad/Downloads/Compressed/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv --initpy
 
 arm_gazebo_generate_messages_py: arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_py
+arm_gazebo_generate_messages_py: /home/riyad/Downloads/Compressed/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/_pose.py
 arm_gazebo_generate_messages_py: /home/riyad/Downloads/Compressed/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv/_fk.py
 arm_gazebo_generate_messages_py: /home/riyad/Downloads/Compressed/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv/_ik.py
+arm_gazebo_generate_messages_py: /home/riyad/Downloads/Compressed/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/msg/__init__.py
 arm_gazebo_generate_messages_py: /home/riyad/Downloads/Compressed/arm_ws/devel/lib/python3/dist-packages/arm_gazebo/srv/__init__.py
 arm_gazebo_generate_messages_py: arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_py.dir/build.make
 

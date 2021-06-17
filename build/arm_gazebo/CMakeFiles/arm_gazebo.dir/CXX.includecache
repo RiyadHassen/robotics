@@ -86,6 +86,22 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
+/home/riyad/Downloads/Compressed/arm_ws/devel/include/arm_gazebo/pose.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
 /home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/src/controller.cpp
 functional
 -
@@ -105,6 +121,8 @@ ros/callback_queue.h
 /home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/src/ros/callback_queue.h
 ros/ros.h
 /home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/src/ros/ros.h
+arm_gazebo/pose.h
+/home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/src/arm_gazebo/pose.h
 arm_gazebo/ik.h
 /home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/src/arm_gazebo/ik.h
 arm_gazebo/fk.h

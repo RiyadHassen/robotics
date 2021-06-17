@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "/home/riyad/Downloads/Compressed/arm_ws/devel/include/arm_gazebo/fk.h"
   "/home/riyad/Downloads/Compressed/arm_ws/devel/include/arm_gazebo/ik.h"
+  "/home/riyad/Downloads/Compressed/arm_ws/devel/include/arm_gazebo/pose.h"
   "CMakeFiles/arm_gazebo_generate_messages_cpp"
 )
 

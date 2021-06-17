@@ -53,21 +53,28 @@ CMAKE_BINARY_DIR = /home/riyad/Downloads/Compressed/arm_ws/build
 # Include the progress variables for this target.
 include arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_nodejs.dir/progress.make
 
+arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_nodejs: /home/riyad/Downloads/Compressed/arm_ws/devel/share/gennodejs/ros/arm_gazebo/msg/pose.js
 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_nodejs: /home/riyad/Downloads/Compressed/arm_ws/devel/share/gennodejs/ros/arm_gazebo/srv/fk.js
 arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_nodejs: /home/riyad/Downloads/Compressed/arm_ws/devel/share/gennodejs/ros/arm_gazebo/srv/ik.js
 
 
+/home/riyad/Downloads/Compressed/arm_ws/devel/share/gennodejs/ros/arm_gazebo/msg/pose.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/riyad/Downloads/Compressed/arm_ws/devel/share/gennodejs/ros/arm_gazebo/msg/pose.js: /home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/msg/pose.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/riyad/Downloads/Compressed/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from arm_gazebo/pose.msg"
+	cd /home/riyad/Downloads/Compressed/arm_ws/build/arm_gazebo && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/msg/pose.msg -Iarm_gazebo:/home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_gazebo -o /home/riyad/Downloads/Compressed/arm_ws/devel/share/gennodejs/ros/arm_gazebo/msg
+
 /home/riyad/Downloads/Compressed/arm_ws/devel/share/gennodejs/ros/arm_gazebo/srv/fk.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
 /home/riyad/Downloads/Compressed/arm_ws/devel/share/gennodejs/ros/arm_gazebo/srv/fk.js: /home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/srv/fk.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/riyad/Downloads/Compressed/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from arm_gazebo/fk.srv"
-	cd /home/riyad/Downloads/Compressed/arm_ws/build/arm_gazebo && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/srv/fk.srv -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_gazebo -o /home/riyad/Downloads/Compressed/arm_ws/devel/share/gennodejs/ros/arm_gazebo/srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/riyad/Downloads/Compressed/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from arm_gazebo/fk.srv"
+	cd /home/riyad/Downloads/Compressed/arm_ws/build/arm_gazebo && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/srv/fk.srv -Iarm_gazebo:/home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_gazebo -o /home/riyad/Downloads/Compressed/arm_ws/devel/share/gennodejs/ros/arm_gazebo/srv
 
 /home/riyad/Downloads/Compressed/arm_ws/devel/share/gennodejs/ros/arm_gazebo/srv/ik.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
 /home/riyad/Downloads/Compressed/arm_ws/devel/share/gennodejs/ros/arm_gazebo/srv/ik.js: /home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/srv/ik.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/riyad/Downloads/Compressed/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from arm_gazebo/ik.srv"
-	cd /home/riyad/Downloads/Compressed/arm_ws/build/arm_gazebo && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/srv/ik.srv -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_gazebo -o /home/riyad/Downloads/Compressed/arm_ws/devel/share/gennodejs/ros/arm_gazebo/srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/riyad/Downloads/Compressed/arm_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from arm_gazebo/ik.srv"
+	cd /home/riyad/Downloads/Compressed/arm_ws/build/arm_gazebo && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/srv/ik.srv -Iarm_gazebo:/home/riyad/Downloads/Compressed/arm_ws/src/arm_gazebo/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_gazebo -o /home/riyad/Downloads/Compressed/arm_ws/devel/share/gennodejs/ros/arm_gazebo/srv
 
 arm_gazebo_generate_messages_nodejs: arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_nodejs
+arm_gazebo_generate_messages_nodejs: /home/riyad/Downloads/Compressed/arm_ws/devel/share/gennodejs/ros/arm_gazebo/msg/pose.js
 arm_gazebo_generate_messages_nodejs: /home/riyad/Downloads/Compressed/arm_ws/devel/share/gennodejs/ros/arm_gazebo/srv/fk.js
 arm_gazebo_generate_messages_nodejs: /home/riyad/Downloads/Compressed/arm_ws/devel/share/gennodejs/ros/arm_gazebo/srv/ik.js
 arm_gazebo_generate_messages_nodejs: arm_gazebo/CMakeFiles/arm_gazebo_generate_messages_nodejs.dir/build.make
